@@ -37,6 +37,9 @@ class SaveCursoRequest extends FormRequest
             'vigencia'=> 'required',
             'videoconferencia'=> 'required',
             'drive'=> 'required',
+            'imagen_curso'=>[
+                $this->route('curso') ? 'nullable':'required',
+                'image'],
         ];
     }
 }

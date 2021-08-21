@@ -1,5 +1,8 @@
 <div class="container">
     <div class="row">
+        @if ($curso->imagen_curso)
+                    <img class="card-img-top" src="/storage/{{$curso->imagen_curso}}" alt="{{$curso->nombre_curso}}">
+        @endif
 
         <div class="col-12 text-left offset-lg-3 col-lg-6">
             <label for="formFile" class="form-label">Imagen curso</label>

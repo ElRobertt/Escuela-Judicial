@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <form method="POST" action="{{ route('curso.update', $curso)}}">
+        <form method="POST" enctype="multipart/form-data" action="{{ route('curso.update', $curso)}}">
             @csrf @method('PATCH')
 
             @include('cursos._form')

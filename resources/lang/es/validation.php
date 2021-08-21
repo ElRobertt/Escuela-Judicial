@@ -167,5 +167,6 @@ return [
         'username'              => 'usuario',
         'year'                  => 'año',
         'dirigido_id'           => 'dirigido a',
+        'imagen_curso'          => 'imagen',
     ],
 ];

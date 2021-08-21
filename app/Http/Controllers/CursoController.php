@@ -7,6 +7,7 @@ use App\UsersInCursos;
 use App\Dirigido;
 use App\Http\Requests\SaveCursoRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CursoController extends Controller
 {
@@ -63,13 +64,26 @@ class CursoController extends Controller
 
     public function update(Curso $curso, SaveCursoRequest $request)
         {
-            $curso->update($request->validated());
+            if($request->hasFile('imagen_curso')){
+                Storage::delete($curso->imagen_curso);
+
+                $curso->fill( $request->validated());
+
+                $curso->imagen_curso=$request->file('imagen_curso')->store('imagenes');
+
+                $curso->save();
+
+            } else{
+                $curso->update(array_filter($request->validated()));
+            }
+
 
             return redirect()->route('curso.show', $curso);
         }
 
     public function destroy(Curso $curso)
     {
+        Storage::delete($curso->imagen_curso);
 
         $curso->delete();
         return redirect()->route('curso.index');
