@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+
+.logos{
+    height: 100%;
+    width: 40%;
+    margin-left: 330px;
+    margin-top: 20px;
+    background-image: url("../images/escuelajulogo.png");
+
+}
+
+.logos2{
+    margin-top: 30px;
+    height: 80%;
+    width: 60%;
+
+}
+.bgtr{
+    background-color: transparent !important;
+}
+.font1{
+    font-family: 'Montserrat', sans-serif;
+    color: #4c0d0d  ;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 30px !important;
+    font-weight: 600;
+}
+.font133{
+    font-family: 'Montserrat', sans-serif;
+    color: #4c0d0d !important  ;
+    font-size: 18px;
+    margin-left: 25px;
+    text-align: left;
+    font-weight: 600;
+
+}
+.font1:active{
+
+        font-family: 'Montserrat', sans-serif;
+        color: #610519  !important ;
+        font-size: 18px;
+        margin-top: 20px;
+        text-align: center;
+        margin-left: 30px;
+    }
+.font1ss{
+    font-family: 'Montserrat', sans-serif;
+    color: #4c0d0d   ;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 230px !important;
+}
+    .font12{
+        font-family: 'Montserrat', sans-serif;
+    color: #4c0d0d   ;
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 380px !important;
+    }
+.txtprimary{
+    font-family: 'Montserrat', sans-serif;
+    color: #4c0d0d !important;
+    font-size: 20Px;
+    font-weight: 600;
+}
+.bls{
+    font-weight: 800;
+}
+.linedown{
+    padding-bottom: 15px;
+    border-bottom: 3px solid #4c0d0d;
+
+}
+.csss{
+    max-width: 350px;
+    align-items: center;
+}
+.colorbtnp{
+    color: #fff;
+    background-color: #4c0d0d !important;
+    border-color: #4c0d0d !important;
+}
+.colorbtnp:hover{
+    color: #4c0d0d !important;
+    background-color: white !important;
+}
+.colorbtnps{
+    color: #aaa;
+    background-color: transparent;
+    margin: 0px;
+}
+
+.mts{
+    height: 350px !important;
+}
+.colorbtnp2{
+    color: #fff;
+    background-color: #4c0d0d !important;
+    border-color: #4c0d0d !important;
+    width: auto;
+    height: 3%;
+}
+.colorbtnp::hover{
+    color: #fff;
+    background-color: blue !important;
+    border-color: #4c0d0d !important;
+}
+.hs{
+    height: 100px;
+    background-color: gray;
+}
+.f1{
+        position:fixed !important;
+        left:0px !important;
+        bottom:0px !important;
+        height:150px !important;
+        width:100% !important;
+        background:#999 !important;
+
+}
+.txt-2{
+    color: #aaa !important;
+    font-size: 15px !important;
+}
+
+.sc{
+    background-color: red !important;
+    border-color: red !important;
+}
+
+.clarge{
+    height: 00px;
+    width: 800px;
+}
+
+.bgs{
+    background: rgb(76,13,13);
+    background: linear-gradient(351deg, rgba(76,13,13,1) 0%, rgba(92,77,77,1) 100%);
+    font-family: 'Montserrat';
+    color: #dbad3a;
+}
+
+body {
+    background-image: url("../images/bg1.jpeg");
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.logaa{
+    height: 250px !important;
+    width: 180px !important;
+}
+
+
+.msl{
+    margin-left: 105px;
+}
+
+@media only screen and (max-width: 700px) {
+    .msl{
+        margin-left: 5px;
+    }
+    .font1{
+        font-family: 'Montserrat', sans-serif;
+        color: #4c0d0d   ;
+        font-size: 20px;
+        margin-top: 20px;
+        text-align: center;
+        margin-left: 5px !important;
+    }
+    .font1:active{
+
+            font-family: 'Montserrat', sans-serif;
+            color: #610519  !important ;
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+            margin-left: 5px;
+        }
+    .font1ss{
+        font-family: 'Montserrat', sans-serif;
+        color: #4c0d0d   ;
+        font-size: 20px;
+        margin-top: 20px;
+        text-align: center;
+        margin-left: 5px !important;
+    }
+        .font12{
+            font-family: 'Montserrat', sans-serif;
+        color: #4c0d0d   ;
+        font-size: 15px;
+        margin-top: 40px;
+        text-align: center;
+        margin-left: 171px !important;
+        }
+}
