@@ -27,7 +27,7 @@
                           <a class="nav-link font1 ml-5" href="{{ route('curso.index')}}">Cursos y diplomados</a>
                        </li>
                        <li class="nav-item {{ setActive('perfil.*')}}">
-                          <a class="nav-link font1 ml-5 " href="{{ route('perfil.index')}}">Mi Perfils</a>
+                          <a class="nav-link font1 ml-5 " href="{{ route('perfil.index')}}">Mi Perfil</a>
                        </li>
                        <li class="nav-item dropdown mt-0" style="list-style: none">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle font12 " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
