@@ -51,4 +51,9 @@ class User extends Authenticatable
         return false;
 
    }
+
+   public function cursoUser()
+   {
+       return $this->belongsToMany(Curso::class);
+   }
 }

@@ -11,8 +11,11 @@ class Curso extends Model
 
     protected $guarded = [];
 
-    public function dirigido()
-    {
+    public function dirigido() {
        return $this->belongsTo(Dirigido::class, 'dirigido_id');
+    }
+
+    public function userCurso() {
+        return $this->belongsToMany(User::class, 'users_in_cursos');
     }
 }
