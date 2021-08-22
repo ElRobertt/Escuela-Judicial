@@ -40,7 +40,8 @@
                     <div class="col-3 ">
                             <div class="card mb-5" style="width: 270px; min-height:250px">
                                 @if ($inicioItem->imagen_curso)
-                                    <img class="card-img-top" src="/storage{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">
+
+                                    <img class="card-img-top" src="/storage/{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">
                                 @endif
                                 <div class="card-body">
                                     <h5 class="card-title text-center bls">{{$inicioItem->nombre_curso}}</h5>
