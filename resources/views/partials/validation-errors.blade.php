@@ -1,4 +1,4 @@
-@if ($errors->any())
+{{-- @if ($errors->any())
 
         <ul>
             @foreach ($errors->all() as $error)
@@ -6,4 +6,4 @@
             @endforeach
         </ul>
 
-    @endif
+    @endif --}}

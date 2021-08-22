@@ -16,6 +16,9 @@
     width: 60%;
 
 }
+.mls5{
+    margin-left: 200px !important;
+}
 .bgtr{
     background-color: transparent !important;
 }
@@ -198,5 +201,8 @@ body {
         margin-top: 40px;
         text-align: center;
         margin-left: 171px !important;
+        }
+        .mls5{
+            margin-left: 0px !important;
         }
 }
