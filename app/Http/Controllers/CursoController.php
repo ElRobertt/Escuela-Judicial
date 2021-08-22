@@ -85,7 +85,6 @@ class CursoController extends Controller
     public function destroy(Curso $curso)
     {
         Storage::delete($curso->imagen_curso);
-
         $curso->delete();
         return redirect()->route('curso.index');
     }
@@ -94,9 +93,17 @@ class CursoController extends Controller
         UsersInCursos::create([
             'user_id'=>request('user_id'),
             'curso_id'=>request('curso_id'),
+            'completado'=>request('completado'),
 
         ]);
       return redirect()->route('curso.index');
     }
+    public function actualizar(UsersInCursos $user)
+        {
+            echo 'asdasd';
+            // return $user;
+            // $user->update();
+            // return redirect()->route('curso.show');
+        }
 
 }

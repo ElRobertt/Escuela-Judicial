@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-    @if (auth()->user()->hasRoles(1))
+
         <div class="container mt-5 text-center">
             <div class="row m-0 justify-content-center">
                 <div class="col-sm-12 col-md-4 ">
@@ -36,11 +36,14 @@
                             @csrf
                             <input id="curso_id" type="hidden" name="curso_id" value="{{$curso->id}}" required autocomplete="name">
                             <input id="user_id" type="hidden" name="user_id" value="{{auth()->user()->id}}" required autocomplete="name">
+                            <input id="completado" type="hidden" name="completado" value="0" required autocomplete="name">
+
+                            <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5">inscribirse</button>
                         </form>
                     </div>
-                    <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5" data-toggle="modal" data-target="#modelIds">inscribirse</button>
 
                 </div>
+    @if (auth()->user()->hasRoles(1))
                 <div class="col-sm-12 mb-3 col-md-4 mb-md-0 ">
                     <div class="text-center">
                         <a class="btn btn-primary btn-lg btn-block mb-5" style="background-color: #aaa !important; border-color:#aaa !important" href="{{route('curso.edit', $curso)}}">Editar </a>
@@ -54,8 +57,7 @@
                 </div>
             </div>
         </div>
-    @endif
-
+        {{$users}}
         <div class="container">
 
             <div class="row">
@@ -69,17 +71,28 @@
                                 <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Email</th>
-                                <th>Role</th>
+                                <th>Completado</th>
+                                <th>Acreditar</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($users as $user)
-                                <tr>
-                                    <td>{{$user->id}}"</td>
-                                    <td><a href="{{ route('usuario.show', $user)}}">{{$user->name}}</a></td>
-                                    <td>{{$user->email}}</td>
-                                    <td>{{$user->role_id}}</td>
-                                </tr>
+                            <tr>
+                                <td>{{$user->id}}</td>
+                                <td><a href="{{ route('usuario.show', $user)}}">{{$user->name}}</a></td>
+                                <td>{{$user->email}}</td>
+                                <td>{{$user->pivot->completado}}</td>
+                                <td>
+                                    <form method="POST" action="{{ route('curso.actualizar', $user->pivot->completado)}}">
+                                        @csrf @method('PATCH')
+                                        <div class="text-center">
+                                            <input id="completado" type="hidden" name="completado" value="1" required autocomplete="name">
+                                            <button class="btn btn-primary btn-lg colorbtnp">Acreditar</button>
+                                        </div>
+                                    </form>
+                                </td>
+
+                            </tr>
                             @endforeach
                         </tbody>
                     </table>
@@ -87,9 +100,10 @@
             </div>
         </div>
 
+    @endif
 
 
-    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content " style="background-color: #fff">
                 <div class="modal-header text-center">

@@ -12,7 +12,7 @@
         <div class="col-12 text-left offset-lg-3 col-lg-6">
             <label>
                 Fecha de curso
-                <input class="form-control  mb-3" type="date" name="fecha" placeholder="Fecha curso..." required class="form-control value="{{ old('fecha', $curso->fecha)}}">
+                <input class="form-control  mb-3" type="date" name="fecha" placeholder="Fecha curso..." required class="form-control" value="{{ old('fecha', $curso->fecha)}}">
 
             </label>
         </div>

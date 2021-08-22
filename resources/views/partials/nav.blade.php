@@ -59,8 +59,8 @@
                         </li>
                     </div>
                     <div class="col-6">
-                        <li style="list-style: none" class="nav-item {{ setActive('usuarios.*')}}">
-                            <a class="nav-link font133 "  href="{{ route('usuario.index')}}">Agregar curso</a>
+                        <li style="list-style: none" class="nav-item {{ setActive('curso.*')}}">
+                            <a class="nav-link font133 "  href="{{ route('curso.create')}}">Agregar curso</a>
                         </li>
                     </div>
                      @endif
