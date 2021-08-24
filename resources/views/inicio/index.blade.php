@@ -5,6 +5,9 @@
 
 
 @section('content')
+
+<h1>ola diablo</h1>
+
     <div class="container mb-5">
         <div class="row " height:350px ">
             <div class="col-12 text-center">
