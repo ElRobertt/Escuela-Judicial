@@ -41,6 +41,7 @@
                             <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5">inscribirse</button>
                         </form>
                     </div>
+                    <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5">inscribirse</button>
 
                 </div>
     @if (auth()->user()->hasRoles(1))
