@@ -83,6 +83,10 @@
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->pivot->completado}}</td>
                                 <td>
+
+                                    @if ($user->pivot->completado == 1)
+                                    <button class="btn btn-primary btn-lg " disabled>Acreditar</button>
+                                    @else
                                     <form method="POST" action="{{ route('curso.actualizar', $user->pivot->id)}}">
                                         @csrf
                                         <div class="text-center">
@@ -90,6 +94,9 @@
                                             <button class="btn btn-primary btn-lg colorbtnp">Acreditar</button>
                                         </div>
                                     </form>
+                                    @endif
+
+
                                 </td>
 
                             </tr>
