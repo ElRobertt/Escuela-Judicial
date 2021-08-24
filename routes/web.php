@@ -44,7 +44,8 @@ Route::resource('perfil', 'PerfilController');
 Route::resource('usuario', 'UsuarioController');
 
 Route::post('/cursos', 'CursoController@inscribirse')->name('curso.inscribirse');
-Route::patch('curso/{$user->pivot}', 'CursoController@actualizar')->name('curso.actualizar');
+
+Route::post('cursoss/{user}', 'CursoController@actualizar')->name('curso.actualizar');
 
 // Route::get('/cursos/{id}', function($id = 10) {
 //     return $id;

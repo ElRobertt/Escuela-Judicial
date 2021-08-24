@@ -16,6 +16,6 @@ class Curso extends Model
      }
 
     public function userCurso() {
-        return $this->belongsToMany(User::class, 'users_in_cursos') ->withPivot('completado');
+        return $this->belongsToMany(User::class, 'users_in_cursos') ->withPivot('completado', 'id');
     }
 }

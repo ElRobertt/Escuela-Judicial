@@ -100,10 +100,11 @@ class CursoController extends Controller
     }
     public function actualizar(UsersInCursos $user)
         {
-            echo 'asdasd';
-            // return $user;
-            // $user->update();
-            // return redirect()->route('curso.show');
+            $user->update([
+                'completado'=>request('completado')
+            ]);
+
+            return redirect()->route('curso.show', $user->curso_id);
         }
 
 }

@@ -41,7 +41,6 @@
                             <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5">inscribirse</button>
                         </form>
                     </div>
-                    <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5">inscribirse</button>
 
                 </div>
     @if (auth()->user()->hasRoles(1))
@@ -84,8 +83,8 @@
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->pivot->completado}}</td>
                                 <td>
-                                    <form method="POST" action="{{ route('curso.actualizar', $user->pivot->completado)}}">
-                                        @csrf @method('PATCH')
+                                    <form method="POST" action="{{ route('curso.actualizar', $user->pivot->id)}}">
+                                        @csrf
                                         <div class="text-center">
                                             <input id="completado" type="hidden" name="completado" value="1" required autocomplete="name">
                                             <button class="btn btn-primary btn-lg colorbtnp">Acreditar</button>
