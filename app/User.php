@@ -54,6 +54,6 @@ class User extends Authenticatable
 
    public function cursoUser()
    {
-       return $this->belongsToMany(Curso::class);
+       return $this->belongsToMany(Curso::class, 'users_in_cursos') ->withPivot('completado', 'id');
    }
 }

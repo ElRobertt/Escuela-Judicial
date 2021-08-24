@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Inicio;
+use App\Curso;
+use App\User;
 use Illuminate\Http\Request;
 
 class PerfilController extends Controller
@@ -14,7 +16,9 @@ class PerfilController extends Controller
     public function index()
     {
 
-        $curso=Inicio::latest()->paginate();
-        return view('perfil.index', compact('curso'));
+        return view('perfil.index', [
+            'cursos'=> User::find(auth()->user()->id)->cursoUser,
+        ]);
     }
+
 }

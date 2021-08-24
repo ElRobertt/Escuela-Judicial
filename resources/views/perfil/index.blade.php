@@ -12,17 +12,23 @@
             </div>
             <div class="col-6 mt-3">
                 <h3 class="text-center">Pendientes</h3>
-                @forelse ($curso as $cursoItem)
-                <li class="list-group-item list-group-item-info text-center mb-2"><a  href="{{ route ('curso.show', $cursoItem)}}">{{ $cursoItem->nombre_curso}}</a> </li>
+                @forelse ($cursos as $cursoItem)
+                @if ($cursoItem->pivot->completado==0)
+                    <li class="list-group-item list-group-item-info text-center mb-2"><a  href="{{ route ('curso.show', $cursoItem)}}">{{ $cursoItem->nombre_curso}}</a> </li>
+                @endif
                 @empty
                 <li>No hay cursos para mostrar</li>
                 @endforelse
             </div>
             <div class="col-6 mt-3">
                 <h3 class="text-center">Completados</h3>
-                <div class="alert alert-info text-center  list-group-item list-group-item-success " role="alert">
-                    <a class="txt-2" href="">alertaa</a>
-                </div>
+                @forelse ($cursos as $cursoItem)
+                @if ($cursoItem->pivot->completado==1)
+                    <li class="list-group-item list-group-item-info text-center mb-2"><a  href="{{ route ('curso.show', $cursoItem)}}">{{ $cursoItem->nombre_curso}}</a> </li>
+                @endif
+                @empty
+                <li>No hay cursos para mostrar</li>
+                @endforelse
             </div>
 
 
