@@ -32,8 +32,19 @@
             <div class="row m-0 justify-content-center">
                 <div class="col-sm-12 col-md-4 ">
                     <div class="text-center">
+<<<<<<< HEAD
                             <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5" data-toggle="modal" data-target="#modelIds">inscribirse</button>
 
+=======
+                        <form method="POST" action="{{ route('curso.inscribirse') }} ">
+                            @csrf
+                            <input id="curso_id" type="hidden" name="curso_id" value="{{$curso->id}}" required autocomplete="name">
+                            <input id="user_id" type="hidden" name="user_id" value="{{auth()->user()->id}}" required autocomplete="name">
+                            <input id="completado" type="hidden" name="completado" value="0" required autocomplete="name">
+
+                            <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5">inscribirse</button>
+                        </form>
+>>>>>>> parent of 5914d45b (--)
                     </div>
                 </div>
     @if (auth()->user()->hasRoles(1))
@@ -80,6 +91,7 @@
                                 <td>
 
                                     @if ($user->pivot->completado == 1)
+<<<<<<< HEAD
                                     <div class="text-center">
                                         <button class="btn btn-primary btn-lg colorbtnp2" disabled>Acreditado</button>
                                     </div>
@@ -89,6 +101,17 @@
                                     </div>
 
 
+=======
+                                    <button class="btn btn-primary btn-lg " disabled>Acreditar</button>
+                                    @else
+                                    <form method="POST" action="{{ route('curso.actualizar', $user->pivot->id)}}">
+                                        @csrf
+                                        <div class="text-center">
+                                            <input id="completado" type="hidden" name="completado" value="1" required autocomplete="name">
+                                            <button class="btn btn-primary btn-lg colorbtnp">Acreditar</button>
+                                        </div>
+                                    </form>
+>>>>>>> parent of 5914d45b (--)
                                     @endif
 
 
