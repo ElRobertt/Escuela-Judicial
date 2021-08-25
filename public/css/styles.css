@@ -2,18 +2,17 @@
 
 
 .logos{
-    height: 100%;
-    width: 40%;
+    height: 110px;
+    width: 150px;
     margin-left: 330px;
-    margin-top: 20px;
-    background-image: url("../images/escuelajulogo.png");
+    margin-top: 10px;
 
 }
 
 .logos2{
-    margin-top: 30px;
-    height: 80%;
-    width: 60%;
+    margin-top: 10px;
+    width: 260px;
+    height: 110px;
 
 }
 .mls5{
@@ -25,57 +24,75 @@
 .font1{
     font-family: 'Montserrat', sans-serif;
     color: #4c0d0d  ;
-    font-size: 18px;
-    margin-top: 20px;
-    text-align: center;
-    margin-left: 30px !important;
-    font-weight: 600;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: -160px;
+    font-weight: 400;
 }
 .font133{
     font-family: 'Montserrat', sans-serif;
     color: #4c0d0d !important  ;
-    font-size: 18px;
-    margin-left: 25px;
-    text-align: left;
+    font-size: 16px;
+    margin-left: 400px !important;
+    font-weight: 400;
+
+}
+.active a {
+    color: #4c0d0d !important;
+    text-decoration: none;
     font-weight: 600;
+
+}
+a:hover{
+    color: #aaa !important;
+}
+
+
+.font11{
+    font-family: 'Montserrat', sans-serif;
+    color: #4c0d0d  !important;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 250px !important;
+    font-weight: 400;
 
 }
 .font1:active{
 
         font-family: 'Montserrat', sans-serif;
         color: #610519  !important ;
-        font-size: 18px;
-        margin-top: 20px;
-        text-align: center;
-        margin-left: 30px;
+        font-size: 16px;
+        margin-top: 5px;
+
+
     }
 .font1ss{
     font-family: 'Montserrat', sans-serif;
     color: #4c0d0d   ;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 5px;
     text-align: center;
-    margin-left: 230px !important;
+
 }
     .font12{
         font-family: 'Montserrat', sans-serif;
     color: #4c0d0d   ;
     font-size: 15px;
-    margin-top: 20px;
+    margin-top: 5px;
     text-align: center;
-    margin-left: 380px !important;
+
     }
 .txtprimary{
     font-family: 'Montserrat', sans-serif;
     color: #4c0d0d !important;
     font-size: 20Px;
-    font-weight: 600;
+    font-weight: 300;
 }
 .bls{
     font-weight: 800;
 }
 .linedown{
-    padding-bottom: 15px;
+    padding-bottom: 0px;
     border-bottom: 3px solid #4c0d0d;
 
 }
@@ -149,10 +166,12 @@
 }
 
 body {
-    background-image: url("../images/bg1.jpeg");
+    background-image: url("../images/bg1s.jpg");
     height: 100%;
     width: 100%;
     position: relative;
+    background-attachment: fixed;
+
 }
 
 .logaa{

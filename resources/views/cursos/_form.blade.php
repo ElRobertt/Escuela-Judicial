@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container " style="padding:4em 2rem; margin-top:200px !important">
     <div class="row">
         @if ($curso->imagen_curso)
                     <img class="card-img-top" src="/storage/{{$curso->imagen_curso}}" alt="{{$curso->nombre_curso}}">

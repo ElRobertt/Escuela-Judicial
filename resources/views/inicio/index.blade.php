@@ -6,11 +6,12 @@
 
 @section('content')
 
-<h1>ola diablo</h1>
+{{-- <h1>ola diablo</h1> --}}
 
-    <div class="container mb-5">
+    <div class="container " style="padding:1em 2rem; margin-top:250px !important">
         <div class="row " height:350px ">
             <div class="col-12 text-center">
+                <h4 class="mb-5" style="text-align: left !important; font-family:'montserrat">Bienvenido {{auth()->user()->name}} !</h4>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                     <div class="carousel-item active align-items-center">
@@ -36,7 +37,7 @@
         </div>
 
         <div class="row">
-            <h2 class="txtprimary ml-1 mt-5">Lista de cursos y diplomados</h2>
+            <h1 class="txtprimary ml-1 mt-5">Lista de cursos y diplomados</h1>
         </div>
             <div class="row mt-1 " >
                     @forelse ($inicio as $inicioItem)
@@ -63,7 +64,7 @@
 
 
         <div class="row">
-            <h2 class="txtprimary mt-3 ml-5">Comunicados</h2>
+            <h1 class="txtprimary mt-3 ml-5">Comunicados</h1>
         </div>
 
         <div class="row">

@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container " style="padding:4em 2rem; margin-top:200px !important">
         <div class="row ">
             <div class="col-4 ">
                 <h1 class="text-center ">{{$curso->nombre_curso}}</h1>
@@ -41,7 +41,6 @@
                             <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5">inscribirse</button>
                         </form>
                     </div>
-
                 </div>
     @if (auth()->user()->hasRoles(1))
                 <div class="col-sm-12 mb-3 col-md-4 mb-md-0 ">
@@ -57,7 +56,7 @@
                 </div>
             </div>
         </div>
-        {{$users}}
+        {{-- {{$users}} --}}
         <div class="container">
 
             <div class="row">

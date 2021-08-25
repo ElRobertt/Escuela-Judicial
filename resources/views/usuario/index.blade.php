@@ -2,7 +2,7 @@
 @section('title', 'Usuarios')
 
 @section('content')
-    <div class="container">
+    <div class="container" style="padding:4em 2rem; margin-top:200px !important">
         <div class="row">
             <h1>Usuarios</h1>
         </div>

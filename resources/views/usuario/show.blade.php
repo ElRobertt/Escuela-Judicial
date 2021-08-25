@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container" style="padding:4em 2rem; margin-top:200px !important">
         <div class="row">
             <div class="col-4">
                 <h1 class="text-center ">{{$usuario->name}}</h1>
