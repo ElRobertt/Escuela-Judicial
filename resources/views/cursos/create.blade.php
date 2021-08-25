@@ -10,8 +10,8 @@
                 @csrf
                 @include('cursos._form')
                 <div class="container mb-5">
-                    <div class="row  justify-content-center ">
-                        <div class="col-6 mt-0 text-center ">
+                    <div class="row">
+                        <div class="col-8 mt-2 text-center">
                             <button class="btn  btn-primary colorbtnp btn-block">Añadir curso</button>
                          {{-- <a class="mls5 btn btn-primary btn-lg btn-block colorbtnp" href="{{route('curso.create')}}">Añadir</a> --}}
                      </div>
