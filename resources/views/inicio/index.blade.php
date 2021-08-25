@@ -42,7 +42,7 @@
             <div class="row mt-1 " >
                     @forelse ($inicio as $inicioItem)
                     <div class="col-3 ">
-                            <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:400px !important">
+                            <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:400px !important; object-fit:cover">
                                 @if ($inicioItem->imagen_curso)
 
                                     <img class="card-img-top" src="/storage/{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">

@@ -85,11 +85,12 @@
                                         <button class="btn btn-primary btn-lg colorbtnp2" disabled>Acreditado</button>
                                     </div>
                                     @else
+
                                     <form method="POST" action="{{ route('curso.actualizar', $user->pivot->id)}}">
                                         @csrf
                                         <div class="text-center">
                                             <input id="completado" type="hidden" name="completado" value="1" required autocomplete="name">
-                                            <button class="btn btn-primary btn-lg btn-block colorbtnp mb-1">Acreditar</button>
+                                            <button class="btn btn-primary btn-lg btn-block colorbtnp mb-1" >Acreditar</button>
                                         </div>
                                     </form>
 

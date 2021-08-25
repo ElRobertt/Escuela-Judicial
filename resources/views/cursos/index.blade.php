@@ -14,7 +14,7 @@
                             @forelse ($curso as $cursoItem)
 
                                 <div class="col-3 ">
-                                    <div class="card mt-5" style="width: 270px; min-height:250px">
+                                    <div class="card mt-5" style="width: 270px; min-height:400px !important; max-height:400px !important; object-fit:cover ">
                                         @if ($cursoItem->imagen_curso)
                                             <img class="card-img-top" src="/storage/{{$cursoItem->imagen_curso}}" alt="{{$cursoItem->nombre_curso}}">
                                         @endif
