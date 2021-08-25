@@ -1,3 +1,4 @@
+@@ -1,184 +1,229 @@
 @extends('layouts.layout')
 
 @section('title', 'Curso | '. $curso->nombre_curso)
@@ -32,7 +33,6 @@
             <div class="row m-0 justify-content-center">
                 <div class="col-sm-12 col-md-4 ">
                     <div class="text-center">
-
                         <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5" data-toggle="modal" data-target="#modelIds">inscribirse</button>
 
                     </div>
@@ -65,7 +65,7 @@
                                 <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Email</th>
-                                <th>Completado</th>
+                                <th class="text-center">Completado</th>
                                 <th class="text-center">Acreditacion</th>
                             </tr>
                         </thead>
@@ -75,22 +75,25 @@
                                 <td>{{$user->id}}</td>
                                 <td><a href="{{ route('usuario.show', $user)}}">{{$user->name}}</a></td>
                                 <td>{{$user->email}}</td>
-                                <td>{{$user->pivot->completado}}</td>
+
                                 <td> <div class="text-center">
                                     {{$user->pivot->completado}}
                                     </div> </td>
                                 <td>
-
                                     @if ($user->pivot->completado == 1)
-
                                     <div class="text-center">
                                         <button class="btn btn-primary btn-lg colorbtnp2" disabled>Acreditado</button>
                                     </div>
                                     @else
+                                    <form method="POST" action="{{ route('curso.actualizar', $user->pivot->id)}}">
+                                        @csrf
                                         <div class="text-center">
                                             <input id="completado" type="hidden" name="completado" value="1" required autocomplete="name">
-                                            <button class="btn btn-primary btn-lg colorbtnp" data-toggle="modal" data-target="#modelIda">Acreditar</button>
+                                            <button class="btn btn-primary btn-lg btn-block colorbtnp mb-1">Acreditar</button>
                                         </div>
+                                    </form>
+
+
                                     @endif
                                 </td>
                             </tr>
@@ -198,14 +201,8 @@
         </div>
         <div class="modal-footer">
             <div class="col-12">
-                <form method="POST" action="{{ route('curso.actualizar', $user->pivot->id)}}">
-                    @csrf
-                    <div class="text-center">
-                        <input id="completado" type="hidden" name="completado" value="1" required autocomplete="name">
-                        <button class="btn btn-primary btn-lg btn-block colorbtnp mb-1">Acreditar</button>
 
-                    </div>
-                </form>
+
 
 
 
