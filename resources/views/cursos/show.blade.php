@@ -32,14 +32,8 @@
             <div class="row m-0 justify-content-center">
                 <div class="col-sm-12 col-md-4 ">
                     <div class="text-center">
-                        <form method="POST" action="{{ route('curso.inscribirse') }} ">
-                            @csrf
-                            <input id="curso_id" type="hidden" name="curso_id" value="{{$curso->id}}" required autocomplete="name">
-                            <input id="user_id" type="hidden" name="user_id" value="{{auth()->user()->id}}" required autocomplete="name">
-                            <input id="completado" type="hidden" name="completado" value="0" required autocomplete="name">
+                            <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5" data-toggle="modal" data-target="#modelIds">inscribirse</button>
 
-                            <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5">inscribirse</button>
-                        </form>
                     </div>
                 </div>
     @if (auth()->user()->hasRoles(1))
@@ -70,8 +64,8 @@
                                 <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Email</th>
-                                <th>Completado</th>
-                                <th>Acreditar</th>
+                                <th class="text-center">Completado</th>
+                                <th class="text-center">Acreditacion</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -80,19 +74,21 @@
                                 <td>{{$user->id}}</td>
                                 <td><a href="{{ route('usuario.show', $user)}}">{{$user->name}}</a></td>
                                 <td>{{$user->email}}</td>
-                                <td>{{$user->pivot->completado}}</td>
+                                <td> <div class="text-center">
+                                    {{$user->pivot->completado}}
+                                    </div> </td>
                                 <td>
 
                                     @if ($user->pivot->completado == 1)
-                                    <button class="btn btn-primary btn-lg " disabled>Acreditar</button>
+                                    <div class="text-center">
+                                        <button class="btn btn-primary btn-lg colorbtnp2" disabled>Acreditado</button>
+                                    </div>
                                     @else
-                                    <form method="POST" action="{{ route('curso.actualizar', $user->pivot->id)}}">
-                                        @csrf
-                                        <div class="text-center">
-                                            <input id="completado" type="hidden" name="completado" value="1" required autocomplete="name">
-                                            <button class="btn btn-primary btn-lg colorbtnp">Acreditar</button>
-                                        </div>
-                                    </form>
+                                    <div class="text-center">
+                                        <button class="btn btn-primary btn-lg colorbtnp" data-toggle="modal" data-target="#modelIda">Acreditar</button>
+                                    </div>
+
+
                                     @endif
 
 
@@ -157,6 +153,7 @@
         </div>
         <div class="modal-body text-center">
             <h3 style="font-size:20px; color:#aaa; font-family:montserrat">Estas seguro que te deseas inscribir al curso?</h3>
+            <h4 class="text-center ">{{$curso->nombre_curso}}</h4>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4c0d0d" class="bi bi-check-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                 <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
@@ -164,10 +161,58 @@
         </div>
         <div class="modal-footer">
             <div class="col-12">
-                <button type="button" class="btn btn-large btn-block colorbtnp">Inscribirme</button>
+                <form method="POST" action="{{ route('curso.inscribirse') }} ">
+                    @csrf
+                    <input id="curso_id" type="hidden" name="curso_id" value="{{$curso->id}}" required autocomplete="name">
+                    <input id="user_id" type="hidden" name="user_id" value="{{auth()->user()->id}}" required autocomplete="name">
+                    <input id="completado" type="hidden" name="completado" value="0" required autocomplete="name">
+
+                    <button class="btn btn-primary btn-lg btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds">inscribirse</button>
+                </form>
+
             </div>
             <div class="col-12">
                 <button type="button" class="btn  btn-secondary btn-block colorbtnps" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="modelIda" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalLongTitle">Confirmacion de acreditacion</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            <h3 style="font-size:20px; color:#aaa; font-family:montserrat">Estas seguro que deseas acreditar a este usuario?</h3>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4c0d0d" class="bi bi-check-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+            </svg>
+        </div>
+        <div class="modal-footer">
+            <div class="col-12">
+                <form method="POST" action="{{ route('curso.actualizar', $user->pivot->id)}}">
+                    @csrf
+                    <div class="text-center">
+                        <input id="completado" type="hidden" name="completado" value="1" required autocomplete="name">
+                        <button class="btn btn-primary btn-lg btn-block colorbtnp mb-1">Acreditar</button>
+
+                    </div>
+                </form>
+
+
+
+            </div>
+            <div class="col-12">
+                <button type="button" class="btn  btn-secondary btn-block colorbtnps" data-dismiss="modal">Cancelar</button>
             </div>
         </div>
       </div>
