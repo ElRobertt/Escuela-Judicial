@@ -105,6 +105,10 @@ a:hover{
     background-color: #4c0d0d !important;
     border-color: #4c0d0d !important;
 }
+.colorbtnp2s{
+    color: #4c0d0d !important;
+    background-color: white !important;
+}
 .colorbtnp:hover{
     color: #4c0d0d !important;
     background-color: white !important;

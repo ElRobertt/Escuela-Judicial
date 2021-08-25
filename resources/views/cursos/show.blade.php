@@ -37,8 +37,10 @@
                             <input id="curso_id" type="hidden" name="curso_id" value="{{$curso->id}}" required autocomplete="name">
                             <input id="user_id" type="hidden" name="user_id" value="{{auth()->user()->id}}" required autocomplete="name">
                             <input id="completado" type="hidden" name="completado" value="0" required autocomplete="name">
+                                    <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5">inscribirse</button>
 
-                            <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5">inscribirse</button>
+
+
                         </form>
                     </div>
                 </div>
@@ -56,7 +58,7 @@
                 </div>
             </div>
         </div>
-        {{-- {{$users}} --}}
+
         <div class="container">
 
             <div class="row">
@@ -65,6 +67,7 @@
             <div class="row">
                 <div class="col-12">
                     <table class="table">
+
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -75,6 +78,8 @@
                             </tr>
                         </thead>
                         <tbody>
+
+
                             @foreach ($users as $user)
                             <tr>
                                 <td>{{$user->id}}</td>
@@ -83,8 +88,11 @@
                                 <td>{{$user->pivot->completado}}</td>
                                 <td>
 
+                                    {{-- {{auth()->user()->name}} --}}
                                     @if ($user->pivot->completado == 1)
+
                                     <button class="btn btn-primary btn-lg " disabled>Acreditar</button>
+
                                     @else
                                     <form method="POST" action="{{ route('curso.actualizar', $user->pivot->id)}}">
                                         @csrf
@@ -100,6 +108,7 @@
 
                             </tr>
                             @endforeach
+
                         </tbody>
                     </table>
                 </div>
