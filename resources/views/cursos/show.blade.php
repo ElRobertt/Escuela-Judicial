@@ -166,6 +166,12 @@
             <div class="col-12">
                 <form method="POST" action="{{ route('curso.inscribirse') }} ">
                     @csrf
+                    <input id="user_id" type="hidden" name="email" value="{{auth()->user()->email}}" required autocomplete="name">
+                    <input id="user_id" type="hidden" name="name" value="{{auth()->user()->name}}" required autocomplete="name">
+                    <input id="curso_id" type="hidden" name="nombre_curso" value="{{$curso->nombre_curso}}" required autocomplete="name">
+                    <input id="curso_id" type="hidden" name="fecha" value="{{$curso->fecha}}" required autocomplete="name">
+                    <input id="curso_id" type="hidden" name="drive" value="{{$curso->drive}}" required autocomplete="name">
+                    <input id="curso_id" type="hidden" name="videoconferencia" value="{{$curso->videoconferencia}}" required autocomplete="name">
                     <input id="curso_id" type="hidden" name="curso_id" value="{{$curso->id}}" required autocomplete="name">
                     <input id="user_id" type="hidden" name="user_id" value="{{auth()->user()->id}}" required autocomplete="name">
                     <input id="completado" type="hidden" name="completado" value="0" required autocomplete="name">

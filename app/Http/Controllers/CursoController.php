@@ -6,7 +6,9 @@ use App\Curso;
 use App\UsersInCursos;
 use App\Dirigido;
 use App\Http\Requests\SaveCursoRequest;
+use App\Mail\MessageReceived;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class CursoController extends Controller
@@ -90,13 +92,28 @@ class CursoController extends Controller
     }
    public function inscribirse()
     {
+        $message=[
+            'name'=>request('name'),
+            'nombre_curso'=>request('nombre_curso'),
+            'fecha'=>request('fecha'),
+            'drive'=>request('drive'),
+            'videoconferencia'=>request('videoconferencia'),
+        ];
+
+        $correo= [
+            'email'=>request('email'),
+        ];
+
         UsersInCursos::create([
             'user_id'=>request('user_id'),
             'curso_id'=>request('curso_id'),
             'completado'=>request('completado'),
 
         ]);
-      return redirect()->route('curso.index');
+
+        Mail::to($correo)->send(new MessageReceived);
+        return 'Mensaje enviado';
+    //   return redirect()->route('curso.index');
     }
     public function actualizar(UsersInCursos $user)
         {

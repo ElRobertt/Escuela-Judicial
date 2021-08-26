@@ -21,7 +21,7 @@
                 @endforelse
             </div>
             <div class="col-6 mt-3">
-                <h3 class="text-center">Completados</h3>
+                <h3 class="text-center">Acreditado</h3>
                 @forelse ($cursos as $cursoItem)
                 @if ($cursoItem->pivot->completado==1)
                     <li class="list-group-item list-group-item-info text-center mb-2"><a  href="{{ route ('curso.show', $cursoItem)}}">{{ $cursoItem->nombre_curso}}</a> </li>
