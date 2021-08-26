@@ -8,7 +8,7 @@
 
 {{-- <h1>ola diablo</h1> --}}
 
-    <div class="container " style="padding:1em 2rem; margin-top:250px !important">
+    <div class="container " style="padding:1em 2rem; margin-top:210px !important">
         <div class="row " height:350px ">
             <div class="col-12 text-center">
                 <h4 class="mb-5" style="text-align: left !important; font-family:'montserrat">Bienvenido {{auth()->user()->name}} !</h4>

@@ -26,14 +26,14 @@
     color: #4c0d0d  ;
     font-size: 16px;
     margin-top: 5px;
-    margin-left: -160px;
+    margin-left: 0px;
     font-weight: 400;
 }
 .font133{
     font-family: 'Montserrat', sans-serif;
     color: #4c0d0d !important  ;
     font-size: 16px;
-    margin-left: 400px !important;
+    margin-left: 0px !important;
     font-weight: 400;
 
 }
@@ -42,6 +42,9 @@
     text-decoration: none;
     font-weight: 600;
 
+}
+.ass{
+    color: #4c0d0d !important;
 }
 a:hover{
     color: #aaa !important;
@@ -53,7 +56,7 @@ a:hover{
     color: #4c0d0d  !important;
     font-size: 16px;
     margin-top: 5px;
-    margin-left: 250px !important;
+    margin-left: 0px !important;
     font-weight: 400;
 
 }
@@ -92,8 +95,6 @@ a:hover{
     font-weight: 800;
 }
 .linedown{
-    padding-bottom: 0px;
-    border-bottom: 3px solid #4c0d0d;
 
 }
 .csss{

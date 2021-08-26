@@ -1,4 +1,4 @@
-@@ -1,184 +1,229 @@
+
 @extends('layouts.layout')
 
 @section('title', 'Curso | '. $curso->nombre_curso)
@@ -31,19 +31,19 @@
 
         <div class="container mt-5 text-center">
             <div class="row m-0 justify-content-center">
-                <div class="col-sm-12 col-md-4 ">
+                <div class="col-sm-12 col-md-3 ">
                     <div class="text-center">
                         <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5" data-toggle="modal" data-target="#modelIds">inscribirse</button>
 
                     </div>
                 </div>
     @if (auth()->user()->hasRoles(1))
-                <div class="col-sm-12 mb-3 col-md-4 mb-md-0 ">
+                <div class="col-sm-12 mb-3 col-md-3 mb-md-0 ">
                     <div class="text-center">
                         <a class="btn btn-primary btn-lg btn-block mb-5" style="background-color: #aaa !important; border-color:#aaa !important" href="{{route('curso.edit', $curso)}}">Editar </a>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4 ">
+                <div class="col-sm-12 col-md-3 ">
                     <div class="text-center">
                         <button class="btn btn-danger btn-lg btn-block delete-btn" data-toggle="modal" data-target="#modelId">Eliminar</a>
 
@@ -90,7 +90,7 @@
                                         @csrf
                                         <div class="text-center">
                                             <input id="completado" type="hidden" name="completado" value="1" required autocomplete="name">
-                                            <button class="btn btn-primary btn-lg btn-block colorbtnp mb-1" >Acreditar</button>
+                                            <button class="btn btn-primary btn-lg colorbtnp mb-1" >Acreditar</button>
                                         </div>
                                     </form>
 
