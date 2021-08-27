@@ -5,37 +5,56 @@
 
 @section('content')
 
-    <div class="container" style="padding:4em 2rem; margin-top:200px !important">
+    <div class="container" style="padding:4em 2rem; margin-top:170px !important">
         <div class="row">
-            <div class="col-4">
-                <h1 class="text-center ">{{$usuario->name}}</h1>
-                <img class="card-img-top" src="../../images/e1.jpg" alt="Card image cap">
+
+            <div class="col-3 offset-1 mt-2">
+                <h2>Datos Generales</h2>
+                <img class="img-fluid rounded-circle text-center offset-3" src="../../images/IMG_38702.jpg" alt="Card image cap" style="max-height: 50%">
             </div>
             <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
 
                 <div class="text-left">
-                    <p class="text-secondary mt-5">Email: {{$usuario->email}}</p>
-                    <p class="text-secondary">Rol: {{$usuario->role_id}}</p>
+                    <h3 class="text-center mt-5"> <b> {{$usuario->name}}</b> </h3>
+                    <h5 class="text-center"> Juez</h5>
+                    <p class="text-secondary ml-4 ">Email: <br> <b>{{$usuario->email}}</b> </p>
+
+                    <p class="text-center">Fecha Nacimiento: <br> <b>12/3/1993</b> </p>
+
                 </div>
             </div>
+            <div class="col-sm-12 mb-3 col-md-2 mb-md-0 mt-5">
+
+                @if (auth()->user()->hasRoles(1))
+                        <div class="text-center">
+                            <a class="btn btn-primary btn-sm btn-block  colorbtnpss mb-5" href="{{route('usuario.edit', $usuario)}}">Editar </a>
+                        </div>
+
+                @endif
+                <p style="margin-top: 40px !important"  class="text-center">Grado Estudios: <br> <b> Lic. derecho</b> </p>
+
+
+            </div>
+            <div class="col-sm-12 col-md-2 mt-5">
+                @if (auth()->user()->hasRoles(1))
+                <div class="text-center">
+                    <button class="btn btn-danger btn-sm btn-block delete-btn colorbtnpss " data-toggle="modal" data-target="#modelId">Eliminar</a>
+                </div>
+            @endif
+
+            </div>
+            @if ($usuario->role_id==1)
+            <p style="margin-top: 60px !important" class="text-secondary text-center">Rol: <b>Administrador</b> </p>
+            @else
+            <p class="text-secondary text-center">Rol: <b>Alumno</b> </p>
+            @endif
+            <p class="text-center">Fecha Inscripcios: <b>28/6/2021</b> </p>
         </div>
+
     </div>
-    @if (auth()->user()->hasRoles(1))
-        <div class="container mt-5 text-center">
-            <div class="row m-0 justify-content-center">
-                <div class="col-sm-12 mb-3 col-md-8 mb-md-0 ">
-                    <div class="text-center">
-                        <a class="btn btn-primary btn-lg btn-block mb-5" href="{{route('usuario.edit', $usuario)}}">Editar </a>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-5 ">
-                    <div class="text-center">
-                        <button class="btn btn-danger btn-lg btn-block delete-btn" data-toggle="modal" data-target="#modelId">Eliminar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endif
+
+
+
 
 
 
