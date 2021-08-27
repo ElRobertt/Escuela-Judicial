@@ -22,7 +22,9 @@
                 <p class="text-secondary mt-5">Nombre docente: {{$curso->docente}}</p>
                 <p class="text-secondary ">Dirigido a: {{$curso->dirigido_id}}</p>
                 <p class="text-secondary ">Horas del curso: {{$curso->horas_curso}}</p>
-                <p class="text-secondary " style="margin-bottom: 40px">Vigencia: {{$curso->vigencia}}</p>
+                <p class="text-secondary">Materia: {{$curso->materia}}</p>
+                <p class="text-secondary " style="margin-bottom: 40px">Asistentes: {{$curso->vigencia}}</p>
+
                 <div class="offset-6 text-center col-xl-12">
                     <button class="btn btn-primary btn-sm btn-block colorbtnp mb-5" data-toggle="modal" data-target="#modelIds">inscribirse</button>
 
@@ -32,10 +34,10 @@
             <div class="col-sm-12 col-md-3 col-lg-2 col-xl-3">
 
                 <div class="text-left">
-                    <p class="text-secondary mt-5">Link Videoconferencia: {{$curso->videoconferencia}}</p>
-                    <p class="text-secondary">Drive: {{$curso->drive}}</p>
-                    <p class="text-secondary">Materia: {{$curso->materia}}</p>
-                    <p class="text-secondary">Espacios disponibles: {{$curso->horas_curso}}</p>
+                    {{-- <p class="text-secondary mt-5">Link Videoconferencia: {{$curso->videoconferencia}}</p>
+                    <p class="text-secondary">Drive: {{$curso->drive}}</p> --}}
+
+                    {{-- <p class="text-secondary">Espacios disponibles: {{$curso->horas_curso}}</p> --}}
 
                 </div>
 

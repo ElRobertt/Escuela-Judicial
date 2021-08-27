@@ -93,7 +93,7 @@ class CursoController extends Controller
     }
    public function inscribirse()
     {
-        $message=[
+        $msg=[
             'name'=>request('name'),
             'nombre_curso'=>request('nombre_curso'),
             'fecha'=>request('fecha'),
@@ -112,7 +112,7 @@ class CursoController extends Controller
 
         ]);
 
-        Mail::to($correo)->send(new MessageReceived);
+        Mail::to($correo)->send(new MessageReceived ($msg));
         return 'Mensaje enviado';
     //   return redirect()->route('curso.index');
     }

@@ -15,14 +15,12 @@
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                     <div class="carousel-item active align-items-center">
-                        <img class="   " src="images/e1.jpg" alt="primer slide" style="height: 350px" >
+                        <img class="   " src="images/c1.jpeg" alt="primer slide" style="height: 350px" >
                     </div>
                     <div class="carousel-item">
-                        <img class="" src="images/e2.png" alt="segundo slide" style="height: 350px">
+                        <img class="" src="images/c2.jpeg" alt="segundo slide" style="height: 350px">
                     </div>
-                    <div class="carousel-item">
-                        <img class="" src="images/e3.png" style="height: 350px" alt="tercer slide">
-                    </div>
+
                     </div>
                     <a class="carousel-control-prev mts" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -42,15 +40,15 @@
             <div class="row mt-1 " >
                     @forelse ($inicio as $inicioItem)
                     <div class="col-3 ">
-                            <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:400px !important; object-fit:cover">
+                            <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:450px !important; object-fit:cover">
                                 @if ($inicioItem->imagen_curso)
 
                                     <img class="card-img-top" src="/storage/{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">
                                 @endif
                                 <div class="card-body">
-                                    <h5 class="card-title text-center bls">{{$inicioItem->nombre_curso}}</h5>
-                                    <p class="card-text text-center" style="font-weight: 500;">{{$inicioItem->docente}}</p>
-                                    <p class="card-text text-center">{{$inicioItem->fecha}}</p>
+                                    <h5 class="card-title text-center bls">Nombre Curso:<br>{{$inicioItem->nombre_curso}}</h5>
+                                    <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
+                                    <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
                                     <div class="text-center">
                                         <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
                                     </div>

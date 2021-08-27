@@ -14,15 +14,15 @@
                             @forelse ($curso as $cursoItem)
 
                                 <div class="col-3 ">
-                                    <div class="card mt-5" style="width: 270px; min-height:400px !important; max-height:400px !important; object-fit:cover ">
+                                    <div class="card mt-5" style="width: 270px; min-height:400px !important; max-height:450px !important; object-fit:cover ">
                                         @if ($cursoItem->imagen_curso)
                                             <img class="card-img-top" src="/storage/{{$cursoItem->imagen_curso}}" alt="{{$cursoItem->nombre_curso}}">
                                         @endif
 
                                             <div class="card-body">
-                                                <h5 class="card-title text-center">{{$cursoItem->nombre_curso}}</h5>
-                                                <p class="card-text">{{$cursoItem->docente}}</p>
-                                                <p class="card-text">{{$cursoItem->fecha}}</p>
+                                                <h5 class="card-title text-center">Nombre Curso: <br>{{$cursoItem->nombre_curso}}</h5>
+                                                <p class="card-text">Docente: {{$cursoItem->docente}}</p>
+                                                <p class="card-text">Fecha: {{$cursoItem->fecha}}</p>
                                                 <div class="text-center" ">
                                                     <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $cursoItem)}}">Ver mas </a>
                                                 </div>

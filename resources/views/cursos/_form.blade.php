@@ -67,8 +67,8 @@
 
     <div class="row">
         <div class="col-12 text-left offset-lg-3 col-lg-3">
-            <label for="dsc" class="form-label"> total de participantes</label>
-            <input class="form-control offset-lg-0 col-lg-12 mb-3" name="vigencia" placeholder="Vigencia..." value="{{ old('vigencia', $curso->vigencia)}}">
+            <label for="dsc" class="form-label"> Asistentes</label>
+            <input class="form-control offset-lg-0 col-lg-12 mb-3" name="vigencia" placeholder="Asistentes..." value="{{ old('vigencia', $curso->vigencia)}}">
         </div>
         <div class="col-12 text-left offset-lg-0 col-lg-3">
             <label for="dsc" class="form-label"> Materia</label>
