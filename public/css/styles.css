@@ -110,6 +110,11 @@ a:hover{
     color: #4c0d0d !important;
     background-color: white !important;
 }
+.colorbtnpss{
+    color: #4c0d0d !important;
+    background-color: white !important;
+
+}
 .colorbtnps{
     color: #aaa;
     background-color: transparent;
@@ -123,8 +128,8 @@ a:hover{
     color: #fff;
     background-color: #4c0d0d !important;
     border-color: #4c0d0d !important;
-    width: auto;
-    height: 3%;
+    width:auto;
+    height: 0%;
 }
 .colorbtnp::hover{
     color: #fff;

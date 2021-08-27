@@ -8,10 +8,10 @@
 <div class="justify-content-center">
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-none navbar-center  " style="padding: 0;">
-    <div class="container linedown " >
+    <div class="container-fluid linedown " >
         <div class="row mb-0 d-flex justify-content-center" style="background-color: none; padding: 0;">
-            <div class="col-6 " style="background-color: white">
-                <img class=" logos2" src="../../images/poderjudlogo.png" alt="" srcset="">
+            <div class="col-6  ml-0 " style="background-color: white">
+                <img class=" logos2" style="margin-left: 50px" src="../../images/poderjudlogo.png" alt="" srcset="">
             </div>
             <div class="col-6" style="background-color: white">
                 <img class="rounded float-left logos" src="../../images/escuelajulogo.png" alt="" srcset="">
@@ -24,21 +24,31 @@
         </div>
         <div class="row align-items-center d-flex justify-content-center" style="background-color: rgba(187, 150, 80); ">
             <div class="col-2  d-flex  justify-content-center ">
-                <div class="" id="navbarTogglerDemo01">
+                <div class=" " id="navbarTogglerDemo01">
                     <ul class="navbar-nav  ">
                       <li class="nav-item {{ setActive('inicio.*')}}">
-                          <a class="nav-link ass" href="{{ route('inicio.index')}}">Inicio</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4c0d0d" class="bi bi-house ml-3 mt-2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                          </svg>
+                          <a class="nav-link ass " href="{{ route('inicio.index')}}">Inicio</a>
                       </li>
                     </ul>
                   </div>
             </div>
             <div class="col-2 d-flex justify-content-center ">
                 <li class="nav-item text-center {{ setActive('curso.index')}}" style="list-style: none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4c0d0d" class="bi bi-book ml-1 mt-2" viewBox="0 0 16 16">
+                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                      </svg>
                     <a class="nav-link ass" href="{{ route('curso.index')}}">Cursos y diplomados</a>
                  </li>
             </div>
             <div class="col-2 d-flex justify-content-center ">
                  <li class="nav-item {{ setActive('perfil.*')}}" style="list-style: none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4c0d0d" class="bi bi-person ml-4 mt-2" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                      </svg>
                     <a class="nav-link ass" style="" href="{{ route('perfil.index')}} ">Mi Perfil</a>
                  </li>
             </div>
@@ -46,16 +56,23 @@
             @if (auth()->user()->hasRoles(1))
             <div class="col-2 d-flex justify-content-center">
                 <li style="list-style: none" class="nav-item {{ setActive('usuario.*')}}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4c0d0d" class="bi bi-people ml-4 mt-2" viewBox="0 0 16 16">
+                        <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                      </svg>
                     <a class="nav-link ass"  href="{{ route('usuario.index')}}">Usuarios</a>
                 </li>
             </div>
             <div class="col-2">
                 <li style="list-style: none" class="nav-item {{ setActive('curso.create')}}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4c0d0d" class="bi bi-file-earmark-plus ml-5 mt-2" viewBox="0 0 16 16">
+                        <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z"/>
+                        <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                      </svg>
                     <a class="nav-link ass "  href="{{ route('curso.create')}}" style="">Agregar curso</a>
                 </li>
             </div>
             <div class="col-2 d-flex ass">
-                <li class="nav-item dropdown mt-0" style="list-style: none">
+                <li class="nav-item dropdown mt-4" style="list-style: none">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle ass " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                       {{auth()->user()->name}}
                     </a>
@@ -74,12 +91,12 @@
             </div>
             @else
             <div class="col-2 d-flex ass ">
-                <li class="nav-item dropdown mt-0" style="list-style: none">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                <li class="nav-item dropdown mt-2" style="list-style: none">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle ass" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                       {{auth()->user()->name}}
                     </a>
 
-                    <div class="dropdown-menu ass" style=" list-style: none" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu ass" style=" list-style: none; " aria-labelledby="navbarDropdown">
                         <a class="dropdown-item ass" href="{{ route('login')}}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                            Cerrar sesion

@@ -14,41 +14,53 @@
                     <img class="card-img-top" src="/storage/{{$curso->imagen_curso}}" alt="{{$curso->nombre_curso}}">
                 @endif
             </div>
-            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+
+            <div class="col-2 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <p class="text-secondary mt-5">Nombre docente: {{$curso->docente}}</p>
+                <p class="text-secondary ">Dirigido a: {{$curso->dirigido_id}}</p>
+                <p class="text-secondary ">Horas del curso: {{$curso->horas_curso}}</p>
+                <p class="text-secondary " style="margin-bottom: 40px">Vigencia: {{$curso->vigencia}}</p>
+                <div class="offset-6 text-center col-xl-12">
+                    <button class="btn btn-primary btn-sm btn-block colorbtnp mb-5" data-toggle="modal" data-target="#modelIds">inscribirse</button>
+
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-2 col-xl-3">
 
                 <div class="text-left">
-                    <p class="text-secondary mt-5">Nombre docente: {{$curso->docente}}</p>
-                    <p class="text-secondary">Dirigido a: {{$curso->dirigido_id}}</p>
-                    <p class="text-secondary">Horas del curso: {{$curso->horas_curso}}</p>
-                    <p class="text-secondary">Materia: {{$curso->materia}}</p>
-                    <p class="text-secondary">Vigencia: {{$curso->vigencia}}</p>
-                    <p class="text-secondary">Link Videoconferencia: {{$curso->videoconferencia}}</p>
+                    <p class="text-secondary mt-5">Link Videoconferencia: {{$curso->videoconferencia}}</p>
                     <p class="text-secondary">Drive: {{$curso->drive}}</p>
+                    <p class="text-secondary">Materia: {{$curso->materia}}</p>
+                    <p class="text-secondary">Espacios disponibles: {{$curso->horas_curso}}</p>
+
                 </div>
+
             </div>
+
+
+
         </div>
+
     </div>
 
-        <div class="container mt-5 text-center">
+        <div class="container mt-0 text-center">
             <div class="row m-0 justify-content-center">
-                <div class="col-sm-12 col-md-3 ">
-                    <div class="text-center">
-                        <button class="btn btn-primary btn-lg btn-block colorbtnp mb-5" data-toggle="modal" data-target="#modelIds">inscribirse</button>
 
-                    </div>
-                </div>
     @if (auth()->user()->hasRoles(1))
+
                 <div class="col-sm-12 mb-3 col-md-3 mb-md-0 ">
                     <div class="text-center">
-                        <a class="btn btn-primary btn-lg btn-block mb-5" style="background-color: #aaa !important; border-color:#aaa !important" href="{{route('curso.edit', $curso)}}">Editar </a>
+                        <a class="btn btn-primary btn-sm btn-block mb-5 colorbtnpss" href="{{route('curso.edit', $curso)}}">Editar </a>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-3 ">
+                <div class="col-sm-12 col-md-3 " style="margin-left: 10px">
                     <div class="text-center">
-                        <button class="btn btn-danger btn-lg btn-block delete-btn" data-toggle="modal" data-target="#modelId">Eliminar</a>
+                        <button class="btn btn-danger btn-sm btn-block colorbtnpss" data-toggle="modal" data-target="#modelId">Eliminar</a>
 
                         </div>
                 </div>
+
             </div>
         </div>
         {{-- {{$users}} --}}
@@ -82,7 +94,7 @@
                                 <td>
                                     @if ($user->pivot->completado == 1)
                                     <div class="text-center">
-                                        <button class="btn btn-primary btn-lg colorbtnp2" disabled>Acreditado</button>
+                                        <button class="btn btn-primary btn-sm colorbtnp2" disabled>Acreditado</button>
                                     </div>
                                     @else
 
@@ -90,7 +102,7 @@
                                         @csrf
                                         <div class="text-center">
                                             <input id="completado" type="hidden" name="completado" value="1" required autocomplete="name">
-                                            <button class="btn btn-primary btn-lg colorbtnp mb-1" >Acreditar</button>
+                                            <button class="btn btn-primary btn-sm colorbtnp mb-1" >Acreditar</button>
                                         </div>
                                     </form>
 

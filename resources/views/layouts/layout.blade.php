@@ -31,13 +31,13 @@
 
 <footer class="navbar navbar-fixed-bottom mt-5" style="border: 3px solid #4c0d0d">
 
-            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mt-2 mb-2">
-                <img class="" style="height:10%; width:90%" src="../../images/escuelajulogo.png" alt="" srcset="">
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mt-0 mb-0">
+                <img class="" style="height:120px; width:150px" src="../../images/escuelajulogo.png" alt="" srcset="">
             </div>
-            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3  text-center ">
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3  text-left ">
                 <ul class="">
                 <li style="list-style: none; font-weight: bold;
-                font-size: 20px; color:#dbad3a !important">Explorar</li>
+                font-size: 20px; color:#dbad3a !important">EXPLORAR</li>
                 <li style="list-style: none; color:#4c0d0d !important">Inicio</li>
                 <li style="list-style: none; color:#4c0d0d !important ">Cursos</li>
                 <li style="list-style: none; color:#4c0d0d !important">Perfil</li>
@@ -45,7 +45,7 @@
             <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 ">
                 <div class="row">
                     <h5 style="list-style: none; font-weight: bold;
-                    font-size: 20px; color:#dbad3a !important"> VISITANOS</h5>
+                    font-size: 20px; color:#dbad3a !important" class="text-center mt-1"> VISITANOS</h5>
                 </div>
                 <div class="row " style="color:#4c0d0d !important">
                     Zacatecas 109 sur
@@ -60,7 +60,7 @@
                     Tel. (311) 215 4700, 216 0900
                 </div>
             </div>
-            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mt-5 text-center " style="height: 150px; ">
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mt-0 text-center mt-3 " style="height: 100px; ">
                     <h5 style="list-style: none; font-weight: bold; font-size: 20px; color:#dbad3a !important">REDES SOCIALES</h5>
                     <div class="row " style="color:#4c0d0d !important">
                         <h3 class="mr-2 " style="margin-left: 75px" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></h3>
