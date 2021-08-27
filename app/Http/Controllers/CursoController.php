@@ -32,6 +32,7 @@ class CursoController extends Controller
         return view('cursos.show', [
             'curso'=>Curso::findOrFail($id),
             'users'=> Curso::find($id)->userCurso,
+            'contador'=> Curso::withCount(['userCurso'])->find($id),
             'dirigidos'=> Dirigido::pluck('name', 'id')
         ]);
     }

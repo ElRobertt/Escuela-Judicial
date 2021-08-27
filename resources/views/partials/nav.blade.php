@@ -73,7 +73,7 @@
                 </li>
             </div>
             <div class="col-2 d-flex ass">
-                <li class="nav-item dropdown mt-4" style="list-style: none">
+                <li class="nav-item dropdown mt-1" style="list-style: none">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle ass " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                       {{auth()->user()->name}}
                     </a>
