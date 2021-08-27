@@ -5,11 +5,14 @@
 
 @section('content')
 
-    <div class="container" style="padding:4em 2rem; margin-top:170px !important">
+    <div class="container" style="padding:4em 2rem; margin-top:150px !important">
         <div class="row">
 
-            <div class="col-3 offset-1 mt-2">
-                <h2>Datos Generales</h2>
+            <div class="col-4 offset-1 mt-2">
+
+                <h2 class="mt-3"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="50" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                  </svg>Datos Generales</h2>
                 <img class="img-fluid rounded-circle text-center offset-3" src="../../images/IMG_38702.jpg" alt="Card image cap" style="max-height: 50%">
             </div>
             <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -19,7 +22,7 @@
                     <h5 class="text-center"> Juez</h5>
                     <p class="text-secondary ml-4 ">Email: <br> <b>{{$usuario->email}}</b> </p>
 
-                    <p class="text-center">Fecha Nacimiento: <br> <b>12/3/1993</b> </p>
+                    <p class="text-center" style="margin-top: 25px !important">Fecha Nacimiento: <br> <b>12/3/1993</b> </p>
 
                 </div>
             </div>
@@ -31,8 +34,8 @@
                         </div>
 
                 @endif
-                <p style="margin-top: 40px !important"  class="text-center">Grado Estudios: <br> <b> Lic. derecho</b> </p>
-
+                <p style="margin-top: 0px !important"  class="text-center">Grado Estudios: <br> <b> Lic. derecho</b> </p>
+                <p class="text-center">Fecha Inscripcion: <b>28/6/2021</b> </p>
 
             </div>
             <div class="col-sm-12 col-md-2 mt-5">
@@ -48,7 +51,7 @@
             @else
             <p class="text-secondary text-center">Rol: <b>Alumno</b> </p>
             @endif
-            <p class="text-center">Fecha Inscripcios: <b>28/6/2021</b> </p>
+
         </div>
 
     </div>
