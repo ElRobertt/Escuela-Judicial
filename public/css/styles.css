@@ -9,12 +9,13 @@
     margin-right: 100px;
 
 }
-
+.cnt1{
+    margin-top: 200px;
+}
 .logos2{
     margin-top: 10px;
     width: 260px;
     height: 110px;
-    margin-right: 100px;
 }
 .mls5{
     margin-left: 200px !important;
@@ -178,7 +179,9 @@ body {
     background-attachment: fixed;
 
 }
-
+.ocul{
+    visibility: visible;
+}
 .logaa{
     height: 250px !important;
     width: 180px !important;
@@ -189,8 +192,33 @@ body {
     margin-left: 105px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 500px) {
+    .logos{
+        height: 110px;
+    width: 150px;
+    margin-right: 270px !important;
+
+    }
+    .basj{
+
+        background-color: rgba(187, 150, 80);
+    }
+    .ocul{
+        visibility:visible;
+    }
+    .ocultar{
+        visibility: hidden;
+        display:none;
+    }
+
+    .cnt1{
+        margin-top:270px;
+    }
+    h4{
+        font-size: 16px !important;
+    }
     .msl{
+
         margin-left: 5px;
     }
     .font1{

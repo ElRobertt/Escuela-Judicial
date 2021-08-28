@@ -8,14 +8,14 @@
 
 {{-- <h1>ola diablo</h1> --}}
 
-    <div class="container " style="padding:1em 2rem; margin-top:210px !important">
-        <div class="row " height:350px ">
+    <div class="container cnt1 " style="padding:1em 2rem; ">
+        <div class="row ocultar">
             <div class="col-12 text-center">
                 <h4 class="mb-5" style="text-align: left !important; font-family:'montserrat">Bienvenido {{auth()->user()->name}} !</h4>
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleControls" class="carousel slide col-12 col-sm-12 col-lg-12" data-ride="carousel">
                     <div class="carousel-inner">
                     <div class="carousel-item active align-items-center">
-                        <img class="   " src="images/c1.jpeg" alt="primer slide" style="height: 350px" >
+                        <img class=""  src="images/c1.jpeg" alt="primer slide" style="height: 350px" >
                     </div>
                     <div class="carousel-item">
                         <img class="" src="images/c2.jpeg" alt="segundo slide" style="height: 350px">
@@ -39,7 +39,7 @@
         </div>
             <div class="row mt-1 " >
                     @forelse ($inicio as $inicioItem)
-                    <div class="col-3 ">
+                    <div class="col-12 col-sm-12 col-lg-3 col-xs-3  ">
                             <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:450px !important; object-fit:cover">
                                 @if ($inicioItem->imagen_curso)
 
@@ -55,6 +55,7 @@
                                 </div>
                             </div>
                     </div>
+
                     @empty
                     @endforelse
             </div>
