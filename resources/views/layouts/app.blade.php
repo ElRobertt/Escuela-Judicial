@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" href="images/favicon32X.png">
+    <link rel="shortcut icon" href="../../../images/favicon32X.png">
     <title>Inicia Sesion</title>
 
     <!-- Scripts -->
