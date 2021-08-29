@@ -191,6 +191,9 @@ body {
 .msl{
     margin-left: 105px;
 }
+.small{
+    margin-top:150px !important
+}
 
 @media only screen and (max-width: 500px) {
     .logos{
@@ -202,6 +205,9 @@ body {
     .basj{
 
         background-color: rgba(187, 150, 80);
+    }
+    .small{
+    margin-top: 280px !important;
     }
     .ocul{
         visibility:visible;

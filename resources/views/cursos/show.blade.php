@@ -6,100 +6,87 @@
 
 @section('content')
 
-    <div class="container " style="padding:4em 2rem; margin-top:180px !important">
-        <div class="row ">
-            <div class="col-4 ">
-
-                <h2 class="text-center "> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="64" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                  </svg> {{$curso->nombre_curso}}</h2>
-                @if ($curso->imagen_curso)
-                    <img class="card-img-top" src="/storage/{{$curso->imagen_curso}}" alt="{{$curso->nombre_curso}}">
-                @endif
-            </div>
-
-            <div class="col-2 col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                <p class="text-secondary mt-5">Nombre docente: {{$curso->docente}}</p>
-                <p class="text-secondary ">Dirigido a: {{$curso->dirigido_id}}</p>
-                <p class="text-secondary ">Horas del curso: {{$curso->horas_curso}}</p>
-                <p class="text-secondary">Materia: {{$curso->materia}}</p>
-                <p class="text-secondary " style="margin-bottom: 40px">Asistentes: {{$curso->vigencia}}</p>
-
-                <div class="offset-6 text-center col-xl-12">
-                    <button class="btn btn-primary btn-sm btn-block colorbtnp mb-5" data-toggle="modal" data-target="#modelIds">inscribirse</button>
-
+    <div class="container small " style="padding:4em 2rem">
+        <div class="row mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+              </svg>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center ">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+                <h2 class="text-center "> {{$curso->nombre_curso}}</h2>
+                  @if ($curso->imagen_curso)
+            <img class="card-img-top text-center" src="/storage/{{$curso->imagen_curso}}" alt="{{$curso->nombre_curso}}">
+        @endif
                 </div>
 
-            </div>
-            <div class="col-sm-12 col-md-3 col-lg-2 col-xl-3">
+            <div class="col-sm-12 col-md-5 col-lg-6 col-xl-4 mt-lg-5">
 
-                <div class="text-left">
-                    {{-- <p class="text-secondary mt-5">Link Videoconferencia: {{$curso->videoconferencia}}</p>
-                    <p class="text-secondary">Drive: {{$curso->drive}}</p> --}}
 
-                    {{-- <p class="text-secondary">Espacios disponibles: {{$curso->horas_curso}}</p> --}}
+        <p class="text-secondary mt-5 text-center">Nombre docente: {{$curso->docente}}</p>
+        <p class="text-secondary text-center ">Dirigido a: {{$curso->dirigido_id}}</p>
+        <p class="text-secondary text-center">Horas del curso: {{$curso->horas_curso}}</p>
+        <p class="text-secondary text-center">Materia: {{$curso->materia}}</p>
+        <p class="text-secondary text-center " style="margin-bottom: 40px">Asistentes: {{$curso->vigencia}}</p>
 
+                <div class=" text-center col-xl-12">
+                    <script>
+                        if ( suscr == 0) {
+                            document.getElementById('btn-susc').disabled=true;
+
+                        } else {
+                            document.getElementById('btn-susc').disabled=false;
+
+                        }
+                    </script>
+                    <button id="btn-susc" class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds">inscribirse</button>
                 </div>
-
-            </div>
-
-
 
         </div>
-
     </div>
 
-        <div class="container mt-0 text-center">
-            <div class="row m-0 justify-content-center">
 
-    @if (auth()->user()->hasRoles(1))
-
-                <div class="col-sm-12 mb-3 col-md-3 mb-md-0 ">
-                    <div class="text-center">
-                        <a class="btn btn-primary btn-sm btn-block mb-5 colorbtnpss" href="{{route('curso.edit', $curso)}}">Editar </a>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-3 " style="margin-left: 10px">
-                    <div class="text-center">
-                        <button class="btn btn-danger btn-sm btn-block colorbtnpss" data-toggle="modal" data-target="#modelId">Eliminar</a>
-
-                        </div>
-                </div>
-
-            </div>
-        </div>
-        {{-- {{$users}} --}}
-        <div class="container">
-
-            <div class="row">
+         {{-- {{$users}} --}}
+         <div class="container">
+            @if (auth()->user()->hasRoles(1))
+            <div class="row mt-5">
                 <h1>Usuarios</h1>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <table class="table">
+                <div class="col-12 col-sm-12 col-lg-12 col-xl-12 ">
+                    <table class="table mt-1">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th class="d-none d-lg-block">ID</th>
                                 <th>Nombre</th>
                                 <th>Email</th>
-                                <th class="text-center">Completado</th>
+                                <th class="text-center d-none d-lg-block">Completado</th>
                                 <th class="text-center">Acreditacion</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($users as $user)
                             <tr>
-                                <td>{{$user->id}}</td>
+                                <td class="d-none d-lg-block">{{$user->id}}</td>
                                 <td><a href="{{ route('usuario.show', $user)}}">{{$user->name}}</a></td>
                                 <td>{{$user->email}}</td>
 
-                                <td> <div class="text-center">
-                                    {{$user->pivot->completado}}
-                                    </div> </td>
+                                <td class="d-none d-lg-block">
+                                    <div class="text-center">
+                                        @if ($user->pivot->completado==1)
+                                            <a>Si</a>
+                                        @else
+                                            <a>No</a>
+                                        @endif
+
+                                    </div>
+                                </td>
                                 <td>
                                     @if ($user->pivot->completado == 1)
                                     <div class="text-center">
                                         <button class="btn btn-primary btn-sm colorbtnp2" disabled>Acreditado</button>
+                                        <script>                            document.getElementById('btn-susc').disabled=true;
+                                        </script>
                                     </div>
                                     @else
 
@@ -119,10 +106,29 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="container mt-0 text-center">
+                    <div class="row m-0 justify-content-center">
+                        @if (auth()->user()->hasRoles(1))
+                        <div class="col-sm-12 mb-3 col-md-3 mb-md-0 ">
+                            <div class="text-center">
+                                <a class="btn btn-primary btn-sm btn-block mb-1 colorbtnpss" href="{{route('curso.edit', $curso)}}">Editar </a>
+                            </div>
+                        </div>
+                        {{-- <div class="col-sm-12 col-md-3 " >
+                            <div class="text-center">
+                                <button class="btn btn-danger btn-sm colorbtnpss" data-toggle="modal" data-target="#modelId">Eliminar</a>
+
+                                </div>
+                        </div> --}}
+
+                    </div>
+                </div>
             </div>
         </div>
 
     @endif
+    @endif
+
 
 
         <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
@@ -192,8 +198,11 @@
                     <input id="curso_id" type="hidden" name="curso_id" value="{{$curso->id}}" required autocomplete="name">
                     <input id="user_id" type="hidden" name="user_id" value="{{auth()->user()->id}}" required autocomplete="name">
                     <input id="completado" type="hidden" name="completado" value="0" required autocomplete="name">
-
+                    <script>
+                        var suscr = 1;
+                    </script>
                     <button class="btn btn-primary btn-lg btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds">inscribirse</button>
+
                 </form>
 
             </div>
