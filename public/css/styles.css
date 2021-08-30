@@ -131,11 +131,23 @@ a:hover{
     width:auto;
     height: 0%;
 }
+.modal-headerss{
+    display: inline !important;
+}
 .colorbtnp::hover{
     color: #fff;
     background-color: blue !important;
     border-color: #4c0d0d !important;
 }
+.active-pink-2 {
+    border-bottom: 1px solid #f48fb1 !important;
+    box-shadow: 0 1px 0 0 #f48fb1;
+  }
+
+  .active-pink  {
+    border-bottom: 1px solid #f48fb1;
+    box-shadow: 0 1px 0 0 #f48fb1;
+  }
 .hs{
     height: 100px;
     background-color: gray;

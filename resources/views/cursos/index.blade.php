@@ -22,7 +22,7 @@
                                             <div class="card-body">
                                                 <h5 class="card-title text-center">Nombre Curso: <br>{{$cursoItem->nombre_curso}}</h5>
                                                 <p class="card-text">Docente: {{$cursoItem->docente}}</p>
-                                                <p class="card-text">Fecha: {{$cursoItem->fecha}}</p>
+                                                <p class="card-text text-center">Fecha: <br> {{$cursoItem->fecha}}</p>
                                                 <div class="text-center" ">
                                                     <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $cursoItem)}}">Ver mas </a>
                                                 </div>
