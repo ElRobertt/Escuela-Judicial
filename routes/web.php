@@ -47,6 +47,8 @@ Route::post('/cursos', 'CursoController@inscribirse')->name('curso.inscribirse')
 
 Route::post('cursoss/{user}', 'CursoController@actualizar')->name('curso.actualizar');
 
+
+
 // Route::get('/cursos/{id}', function($id = 10) {
 //     return $id;
 // });
