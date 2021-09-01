@@ -51,6 +51,8 @@
                                 <th class="d-none d-lg-block">ID</th>
                                 <th>Nombre</th>
                                 <th>Email</th>
+
+                                <th class="text-center">Calificacion</th>
                                 <th class="text-center d-none d-lg-block">Completado</th>
                                 <th class="text-center">Acreditacion</th>
                             </tr>
@@ -61,7 +63,7 @@
                                 <td class="d-none d-lg-block">{{$user->id}}</td>
                                 <td><a href="{{ route('usuario.show', $user)}}">{{$user->name}}</a></td>
                                 <td>{{$user->email}}</td>
-
+                                <td class="text-center">9</td>
                                 <td class="d-none d-lg-block">
                                     <div class="text-center">
                                         @if ($user->pivot->completado==1)
@@ -160,20 +162,22 @@
   <!-- Modal -->
   <div class="modal fade" id="modelIds" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-headers" style="background-color: rgba(187, 150, 80)">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-lg" viewBox="0 0 16 16">
+      <div class="modal-content" style="">
+        <div class="modal-headerss text-center" style="background-color: rgba(187, 150, 80)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#4c0d0d" class="bi bi-question-lg mt-2 mb-2" viewBox="0 0 16 16">
                 <path d="M3 4.075a.423.423 0 0 0 .43.44H4.9c.247 0 .442-.2.475-.445.159-1.17.962-2.022 2.393-2.022 1.222 0 2.342.611 2.342 2.082 0 1.132-.668 1.652-1.72 2.444-1.2.872-2.15 1.89-2.082 3.542l.005.386c.003.244.202.44.446.44h1.445c.247 0 .446-.2.446-.446v-.188c0-1.278.487-1.652 1.8-2.647 1.086-.826 2.217-1.743 2.217-3.667C12.667 1.301 10.393 0 7.903 0 5.645 0 3.17 1.053 3.001 4.075zm2.776 10.273c0 .95.758 1.652 1.8 1.652 1.085 0 1.832-.702 1.832-1.652 0-.985-.747-1.675-1.833-1.675-1.04 0-1.799.69-1.799 1.675z"/>
               </svg>
 
         </div>
         <div class="modal-body text-center">
-            <h3 style="font-size:20px; color:#aaa; font-family:montserrat">Estas seguro que te deseas inscribir al curso?</h3>
-            <h4 class="text-center ">{{$curso->nombre_curso}}</h4>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4c0d0d" class="bi bi-check-circle" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-            </svg>
+            <h4 style="color:#aaa; font-family:montserrat">¿Estas seguro que te deseas inscribir al curso?</h4>
+            <h5 style="color:#aaa; font-family:montserrat" class="text-center ">{{$curso->nombre_curso}}</h5>
+            <div class="form-check mt-5">
+                <input class="form-check-input" type="checkbox" value="true" id="defaultCheck1" checked disabled>
+                <label class="form-check-label" for="defaultCheck1">
+                  Acepto cumplir con los requisitos establecidos
+                </label>
+              </div>
         </div>
         <div class="modal-footer">
             <div class="col-12">
