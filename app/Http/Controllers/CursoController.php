@@ -114,7 +114,7 @@ class CursoController extends Controller
 
         Mail::to($correo)->send(new MessageReceived ($msg));
 
-        return 'Mensaje enviado';
+
      return redirect()->route('curso.index');
     }
     public function actualizar(UsersInCursos $user)

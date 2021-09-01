@@ -41,7 +41,7 @@
     <div class="container">
 
 
-    <div class="text-center" style="border: 10px solid #4c0d0d;background-color:#4c0d0d; ">
+    <div class="text-center" style="background-color: #4c0d0d; background-image: linear-gradient(160deg, #4c0d0d 0%, #8b7b7b 100%); ">
         <!--[if gte mso 9]>
          <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;">
          <v:fill type="frame" src="http://www.yoursite.com/yourimages/photo.jpg"color="#7bceeb" />
