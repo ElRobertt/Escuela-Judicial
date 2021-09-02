@@ -11,7 +11,7 @@
         <div class="col-12 text-left offset-lg-3 col-lg-3 mt-2">
             <label for="formFile" class="form-label">Imagen curso</label>
             <input name="imagen_curso"class="form-control" type="file" id="formFile">
-          </div>
+        </div>
 
         <div class="col-12 text-left offset-lg-0 col-lg-3 mt-2">
             <label class="form-label">Fecha del curso</label>

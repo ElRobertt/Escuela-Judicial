@@ -34,6 +34,7 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Requests\\SaveCursoRequest' => $baseDir . '/app/Http/Requests/SaveCursoRequest.php',
     'App\\Inicio' => $baseDir . '/app/Inicio.php',
+    'App\\Mail\\MessageReceived' => $baseDir . '/app/Mail/MessageReceived.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
