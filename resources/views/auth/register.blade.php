@@ -7,40 +7,57 @@
   position: absolute;
 }
 </style>
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-none navbar-center  " style="padding: 0;">
-    <div class="container-fluid linedown " >
-        <div " class=" row mb-0 d-flex justify-content-center" style="background-color: white; padding: 0;">
-            <div class="offset-lg-0 col-sm-12 col-md-12 col-lg-6 col-xl-6 ml-0 " style="background-color: white">
-                <img class=" logos2 ocultar"   src="../../images/poderjudlogo.png" alt="" srcset="">
-            </div>
-            <div class="col-12 col-sm-12 mt-3 col-md-6 col-lg-6 col-xl-6 offset-lg-0" style="max-width: 460px; background-color: white">
-                <img class="rounded   col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " src="../../images/escuelajulogo.png" alt="" srcset="">
-            </div>
+
+<div class="container-fluid linedown " >
+    <div " class=" row mb-0 d-flex justify-content-center" style="background-color: white; padding: 0;">
+        <div class="offset-lg-0 col-sm-12 col-md-12 col-lg-6 col-xl-6 ml-0 " style="background-color: white">
+            <img class=" logos2 ocultar"   src="../../images/poderjudlogo.png" alt="" srcset="">
         </div>
+        <div class="col-12 col-sm-12 mt-3 col-md-6 col-lg-6 col-xl-6 offset-lg-0" style="max-width: 460px; background-color: white">
+            <img class="rounded   col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " src="../../images/escuelajulogo.png" alt="" srcset="">
+        </div>
+    </div>
+    <div class="row " style="background-color: white !important"">
+        <div class="ocul  col-12 col-sm-12 col-lg-2 col-xl-2 text-center ass " style="background-color: white ; " >
 
+        </div>
+    </div>
 
-
-</div>
-<div class="justify-content-center">
-
-
-
-
-
+<div class="justify-content-left">
 <div class="container rounded">
-    <div class="row justify-content-center">
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-            <div class="card bg-transparent rounded line border-primary" style="border-color: #4c0d0d !important;
-            border: 0px solid; border-bottom:none">
-                <div class="card-header-primary txtprimary mt-5">
+    <div class="row justify-content-left">
+        <div class="col-12 col-sm-3 col-md-12 col-lg-12 col-xl-12">
+
+            <div class="margs mt-2 card bg-transparent rounded line border-primary" style="border-color: #4c0d0d !important;
+            border: 5px solid; border-bottom:none">
+            <div class="row mt-2 ml-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#4c0d0d" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                  </svg>
+            </div>
+                <div class="card-header-primary txtprimary  ml-3">
+
                     <h2>Datos Generales</h2></div>
-                <div class="card-body">
-                    <form method="POST" enctype="multipart/form-data" action="{{ route('register') }}">
-                        @csrf
+                    <div class="card-body">
+            <table class="table table-sm">
+                <form method="POST" enctype="multipart/form-data" action="{{ route('register') }}">
+
+                <thead>
+                  <tr>
+                    <th scope="row">Completa los siguientes campos.</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+
+                    <td>
+                    @csrf
                         <input id="role_id" type="hidden" name="role_id" value="2" required autocomplete="name">
                         <div class="form-group row">
-                            <label for="name" class="col-md-5 col-form-label-sm text-md-right">Nombre Completo</label>
-                            <div class="col-md-6">
+                            <label for="name" class="col-12  col-form-label-sm text-md-left">Nombre Completo</label><br>
+                            <div class="col-12 ">
                                 <input id="name" type="text" class="form-control-sm @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -49,10 +66,12 @@
                                 @enderror
                             </div>
                         </div>
+                    </td>
+                    <td>
                         <div class="form-group row">
-                            <label for="email" class="col-md-5 col-form-label-sm text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-12 col-form-label-sm text-md-left">{{ __('E-Mail Address') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-12">
                                 <input id="email" type="email" class="form-control-sm @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
@@ -62,18 +81,15 @@
                                 @enderror
                             </div>
                         </div>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-5 col-form-label-sm text-md-right">Confirmar E-Mail</label>
+                            <label for="password" class="col-md-12 col-form-label-sm text-md-left">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control-sm" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-5 col-form-label-sm text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <input id="password" type="password" class="form-control-sm @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
@@ -83,43 +99,65 @@
                                 @enderror
                             </div>
                         </div>
-
-
+                    </td>
+                    <td>
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-5 col-form-label-sm text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-12 col-form-label-sm text-md-left">{{ __('Confirm Password') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-12">
                                 <input id="password-confirm" type="password" class="form-control-sm" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>
                         <div class="form-group row">
-                            <label for="edad" class="col-md-5 col-form-label-sm text-md-right">Edad</label>
-                            <div class="col-md-6">
+                            <label for="edad" class="col-12 col-form-label-sm text-md-left">Edad</label>
+                            <div class="col-md-12">
                                 <input id="edad" type="" class="form-control-sm" name="edad" required autocomplete="">
                             </div>
                         </div>
-
+                      </td>
+                      <td>
                         <div class="form-group row">
-                            <label for="numero" class="col-md-5 col-form-label-sm text-md-right">Número Telefónico</label>
-                            <div class="col-md-6">
+                            <label for="numero" class="col-12 col-form-label-sm text-md-left">Número Telefónico</label>
+                            <div class="col-md-12">
                                 <input id="numero" type="" class="form-control-sm" name="numero" required autocomplete="">
                             </div>
                         </div>
+                      </td>
+                  </tr>
+                  <tr>
 
+                    <td>
                         <div class="form-group row">
-                            <label for="cargo" class="col-md-5 col-form-label-sm text-md-right">Cargo que desempeña</label>
-                            <div class="col-md-6">
+
+                            <label for="cargo" class="col-12 col-form-label-sm text-md-left">Cargo que desempeña</label>
+                            <div class="col-12">
                                 <input id="cargo" type="" class="form-control-sm" name="cargo" required autocomplete="">
                             </div>
                         </div>
+                    </td>
+                    <td>
 
                         <div class="form-group row">
-                            <label for="institucion" class="col-md-5 col-form-label-sm text-md-right">Institucion Laboral</label>
-                            <div class="col-md-6">
+                            <label for="institucion" class="col-12 col-form-label-sm text-md-left">Institucion Laboral</label>
+                            <div class="col-12">
                                 <input id="institucion" type="" class="form-control-sm" name="institucion" required autocomplete="">
                             </div>
                         </div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+
+
+
+
+
 
                         {{-- <div class="form-group row">
                             <div class="col-md-6">
@@ -170,9 +208,7 @@
                         </div> --}}
 
 
-
-
-                        <div class="col-md-6 offset-md-3">
+                        <div class="col-md-12 offset-5 ">
                             <button type="submit" class="btn-primary btn-lg colorbtnp ">
                                 {{ __('Register') }}
                             </button>

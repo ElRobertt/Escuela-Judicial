@@ -214,6 +214,10 @@ body {
     margin-right: 270px !important;
 
     }
+    .margs{
+        margin-left: -50px;
+        border-style: none !important;
+    }
     .basj{
 
         background-color: rgba(187, 150, 80);
