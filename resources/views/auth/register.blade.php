@@ -35,7 +35,7 @@
                 <div class="card-header-primary txtprimary mt-5">
                     <h2>Datos Generales</h2></div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" enctype="multipart/form-data" action="{{ route('register') }}">
                         @csrf
                         <input id="role_id" type="hidden" name="role_id" value="2" required autocomplete="name">
                         <div class="form-group row">
@@ -93,344 +93,94 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="edad" class="col-md-5 col-form-label-sm text-md-right">Edad</label>
+                            <div class="col-md-6">
+                                <input id="edad" type="" class="form-control-sm" name="edad" required autocomplete="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="numero" class="col-md-5 col-form-label-sm text-md-right">Número Telefónico</label>
+                            <div class="col-md-6">
+                                <input id="numero" type="" class="form-control-sm" name="numero" required autocomplete="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="cargo" class="col-md-5 col-form-label-sm text-md-right">Cargo que desempeña</label>
+                            <div class="col-md-6">
+                                <input id="cargo" type="" class="form-control-sm" name="cargo" required autocomplete="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="institucion" class="col-md-5 col-form-label-sm text-md-right">Institucion Laboral</label>
+                            <div class="col-md-6">
+                                <input id="institucion" type="" class="form-control-sm" name="institucion" required autocomplete="">
+                            </div>
+                        </div>
+
+                        {{-- <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="formFile" class="form-label">Imagen perfil</label>
+                                <input name="imagen_perfil" class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="formFile" class="form-label">COPIA CERTIFICADA ACTA NACIMIENTO</label>
+                                <input name="acta_nac" class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="formFile" class="form-label">COPIA CERTIFICADA CEDULA/TITULO</label>
+                                <input name="cedula" class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="formFile" class="form-label">COPIA CREDENCIAL DEL ELECTOR </label>
+                                <input name="credencial" class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="formFile" class="form-label">CARTA EXPOSICION MOTIVOS</label>
+                                <input name="carta_expo" class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="formFile" class="form-label">FOTOGRAFIAS TAMAÑO CREDENCIAL BLANCO Y NEGRO</label>
+                                <input name="fotografia" class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="formFile" class="form-label">COPIA SIMPLE CURP</label>
+                                <input name="curp" class="form-control" type="file" id="formFile">
+                            </div>
+                        </div> --}}
+
+
+
+
+                        <div class="col-md-6 offset-md-3">
+                            <button type="submit" class="btn-primary btn-lg colorbtnp ">
+                                {{ __('Register') }}
+                            </button>
+                        </div>
+
                     </form>
                 </div>
             </div>
-        </div>
-{{-- ---Segunda fila*--- --}}
-
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-5">
-            <div class="card-body " style="margin-top: 40px">
-                <form method="POST" action="{{ route('register') }}">
-                    @csrf
-                    <div class="form-group row">
-                        <label for="password-confirm" class="col-md-5 col-form-label-sm text-md-right">Edad</label>
-                        <div class="col-md-6">
-                            <input id="password-confirm" type="" class="form-control-sm" name="password_confirmation" required autocomplete="">
-                        </div>
-                    </div>
-
-                    <input id="role_id" type="hidden" name="role_id" value="2" required autocomplete="date">
-                    <div class="form-group row">
-                        <label for="date" class="col-md-5 col-form-label-sm text-md-right">Fecha Registro</label>
-                        <div class="col-md-6">
-                            <input disable class="form-control-sm " type="date" id="fecha" name="fecha"  value="<?php echo date("Y-m-d");?>" disable >
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="email" class="col-md-5 col-form-label-sm text-md-right">Numero Telefonico</label>
-                        <div class="col-md-6">
-                            <input id="email" type="" class="form-control-sm @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="">
-
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="password" class="col-md-5 col-form-label-sm text-md-right" >Cargo que desempeña</label>
-
-                        <div class="col-md-6">
-                            <input id="password" class="form-control-sm @error('password')  is-invalid @enderror" placeholder="Ej. Magistrado" name="password" required autocomplete="new-password">
-
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="password-confirm" class="col-md-5 col-form-label-sm text-md-right">Institucion Laboral</label>
-                        <div class="col-md-6">
-                            <input id="password-confirm" type="" class="form-control-sm" placeholder="Ej. Tribunal Superior de Justicia" name="password_confirmation" required autocomplete="">
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 " style="margin-top: 60px">
-            <div class="card-body ">
-                <div id="msg"></div>
-            <form method="post" id="image-form">
-            <input type="file" name="img[]" class="file" accept="image/*">
-                <div class="input-group my-3">
-                    <input type="text" class="form-control" disabled placeholder="Buscar Imagen" id="file">
-                <div class="input-group-append">
-                    <button type="button" id="browse" class="browse btn btn-sm colorbtnp  btn-primary">Buscar</button>
-                </div>
-            </div>
-            </div>
-            <div class="ml-2 col-sm-6">
-                <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail">
-            </div>
-            <script>
-                $(document).on("click", ".browse", function() {
-                var file = $(this).parents().find(".file");
-                file.trigger("click");
-                });
-                $('input[type="file"]').change(function(e) {
-                var fileName = e.target.files[0].name;
-                $("#file").val(fileName);
-
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                    // get loaded data and render thumbnail.
-                    document.getElementById("preview").src = e.target.result;
-                };
-                // read the image file as a data URL.
-                reader.readAsDataURL(this.files[0]);
-                });
-            </script>
-            </form>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-5">
-            <h2>Documentacion Necesaria</h2>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-            <div class="card-body " style="margin-top: 40px; border: 3px solid #4c0d0d; height:350px">
-
-                <div id="msg" class="text-center"> <h5>COPIA CERTIFICADA ACTA NACIMIENTO</h5></div>
-
-                <form method="post" id="image-form">
-                <input type="file" name="img[]" class="file" accept="image/*">
-                    <div class="input-group my-3">
-                        <input type="text" class="form-control" disabled placeholder="Buscar Imagen" id="file">
-                    <div class="input-group-append">
-                        <button type="button" id="browse" class="browse btn btn-sm colorbtnp  btn-primary">Buscar</button>
-                    </div>
-                </div>
-                <div class="ml-2 col-sm-6">
-                    <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail">
-                </div>
-                <script>
-                    $(document).on("click", ".browse", function() {
-                    var file = $(this).parents().find(".file");
-                    file.trigger("click");
-                    });
-                    $('input[type="file"]').change(function(e) {
-                    var fileName = e.target.files[0].name;
-                    $("#file").val(fileName);
-
-                    var reader = new FileReader();
-                    reader.onload = function(e) {
-                        // get loaded data and render thumbnail.
-                        document.getElementById("preview").src = e.target.result;
-                    };
-                    // read the image file as a data URL.
-                    reader.readAsDataURL(this.files[0]);
-                    });
-                </script>
-                </form>
-              </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" >
-            <div class="card-body " style="margin-top: 40px; height:350px; border: 3px solid #4c0d0d">
-
-                    <div id="msg" class="text-center"> <h5> COPIA CERTIFICADA CEDULA/TITULO</h5></div>
-                <form method="post" id="image-form">
-                <input type="file" name="img[]" class="file" accept="image/*">
-                    <div class="input-group my-3">
-                        <input type="text" class="form-control" disabled placeholder="Buscar Imagen" id="file">
-                    <div class="input-group-append">
-                        <button type="button" id="browse" class="browse btn btn-sm colorbtnp  btn-primary">Buscar</button>
-                    </div>
-                </div>
-
-
-                <div class="ml-2 col-sm-6">
-                    <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail">
-                </div>
-                <script>
-                    $(document).on("click", ".browse", function() {
-                    var file = $(this).parents().find(".file");
-                    file.trigger("click");
-                    });
-                    $('input[type="file"]').change(function(e) {
-                    var fileName = e.target.files[0].name;
-                    $("#file").val(fileName);
-
-                    var reader = new FileReader();
-                    reader.onload = function(e) {
-                        // get loaded data and render thumbnail.
-                        document.getElementById("preview").src = e.target.result;
-                    };
-                    // read the image file as a data URL.
-                    reader.readAsDataURL(this.files[0]);
-                    });
-                </script>
-                </form>
-              </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-            <div class="card-body " style="margin-top: 40px; height:350px; border: 3px solid #4c0d0d">
-
-                <div id="msg" class="text-center"> <h5>COPIA CREDENCIAL DEL ELECTOR CEDULA/TITULO</h5></div>
-
-                <form method="post" id="image-form">
-                <input type="file" name="img[]" class="file" accept="image/*">
-                    <div class="input-group my-3">
-                        <input type="text" class="form-control" disabled placeholder="Buscar Imagen" id="file">
-                    <div class="input-group-append">
-                        <button type="button" id="browse" class="browse btn btn-sm colorbtnp  btn-primary">Buscar</button>
-                    </div>
-                </div>
-
-
-                <div class="ml-2 col-sm-6">
-                    <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail">
-                </div>
-                <script>
-                    $(document).on("click", ".browse", function() {
-                    var file = $(this).parents().find(".file");
-                    file.trigger("click");
-                    });
-                    $('input[type="file"]').change(function(e) {
-                    var fileName = e.target.files[0].name;
-                    $("#file").val(fileName);
-
-                    var reader = new FileReader();
-                    reader.onload = function(e) {
-                        // get loaded data and render thumbnail.
-                        document.getElementById("preview").src = e.target.result;
-                    };
-                    // read the image file as a data URL.
-                    reader.readAsDataURL(this.files[0]);
-                    });
-                </script>
-                </form>
-              </div>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-            <div class="card-body " style="margin-top: 40px; border: 3px solid #4c0d0d; height:350px">
-
-                <div id="msg" class="text-center"> <h5>COPIA CERTIFICADA ACTA NACIMIENTO</h5></div>
-
-                <form method="post" id="image-form">
-                <input type="file" name="img[]" class="file" accept="image/*">
-                    <div class="input-group my-3">
-                        <input type="text" class="form-control" disabled placeholder="Buscar Imagen" id="file">
-                    <div class="input-group-append">
-                        <button type="button" id="browse" class="browse btn btn-sm colorbtnp  btn-primary">Buscar</button>
-                    </div>
-                </div>
-                <div class="ml-2 col-sm-6">
-                    <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail">
-                </div>
-                <script>
-                    $(document).on("click", ".browse", function() {
-                    var file = $(this).parents().find(".file");
-                    file.trigger("click");
-                    });
-                    $('input[type="file"]').change(function(e) {
-                    var fileName = e.target.files[0].name;
-                    $("#file").val(fileName);
-
-                    var reader = new FileReader();
-                    reader.onload = function(e) {
-                        // get loaded data and render thumbnail.
-                        document.getElementById("preview").src = e.target.result;
-                    };
-                    // read the image file as a data URL.
-                    reader.readAsDataURL(this.files[0]);
-                    });
-                </script>
-                </form>
-              </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" >
-            <div class="card-body " style="margin-top: 40px; height:350px; border: 3px solid #4c0d0d">
-
-                    <div id="msg" class="text-center"> <h5> COPIA CERTIFICADA CEDULA/TITULO</h5></div>
-                <form method="post" id="image-form">
-                <input type="file" name="img[]" class="file" accept="image/*">
-                    <div class="input-group my-3">
-                        <input type="text" class="form-control" disabled placeholder="Buscar Imagen" id="file">
-                    <div class="input-group-append">
-                        <button type="button" id="browse" class="browse btn btn-sm colorbtnp  btn-primary">Buscar</button>
-                    </div>
-                </div>
-
-
-                <div class="ml-2 col-sm-6">
-                    <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail">
-                </div>
-                <script>
-                    $(document).on("click", ".browse", function() {
-                    var file = $(this).parents().find(".file");
-                    file.trigger("click");
-                    });
-                    $('input[type="file"]').change(function(e) {
-                    var fileName = e.target.files[0].name;
-                    $("#file").val(fileName);
-
-                    var reader = new FileReader();
-                    reader.onload = function(e) {
-                        // get loaded data and render thumbnail.
-                        document.getElementById("preview").src = e.target.result;
-                    };
-                    // read the image file as a data URL.
-                    reader.readAsDataURL(this.files[0]);
-                    });
-                </script>
-                </form>
-              </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-            <div class="card-body " style="margin-top: 40px; height:350px; border: 3px solid #4c0d0d">
-
-                <div id="msg" class="text-center"> <h5>COPIA CREDENCIAL DEL ELECTOR CEDULA/TITULO</h5></div>
-
-                <form method="post" id="image-form">
-                <input type="file" name="img[]" class="file" accept="image/*">
-                    <div class="input-group my-3">
-                        <input type="text" class="form-control" disabled placeholder="Buscar Imagen" id="file">
-                    <div class="input-group-append">
-                        <button type="button" id="browse" class="browse btn btn-sm colorbtnp  btn-primary">Buscar</button>
-                    </div>
-                </div>
-
-
-                <div class="ml-2 col-sm-6">
-                    <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail">
-                </div>
-                <script>
-                    $(document).on("click", ".browse", function() {
-                    var file = $(this).parents().find(".file");
-                    file.trigger("click");
-                    });
-                    $('input[type="file"]').change(function(e) {
-                    var fileName = e.target.files[0].name;
-                    $("#file").val(fileName);
-
-                    var reader = new FileReader();
-                    reader.onload = function(e) {
-                        // get loaded data and render thumbnail.
-                        document.getElementById("preview").src = e.target.result;
-                    };
-                    // read the image file as a data URL.
-                    reader.readAsDataURL(this.files[0]);
-                    });
-                </script>
-                </form>
-              </div>
-        </div>
-    </div>
-    <div class="form-group row mb-0 text-center mt-5 mb-5" >
-        <div class="col-md-6 offset-md-3">
-            <button type="submit" class="btn-primary btn-lg colorbtnp ">
-                {{ __('Register') }}
-            </button>
         </div>
     </div>
 </div>
