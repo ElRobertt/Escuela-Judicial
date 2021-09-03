@@ -148,6 +148,15 @@
                             </div>
                         </div>
                     </td>
+
+                    <td>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="formFile" class="form-label">Imagen perfil</label>
+                                <input name="imagen_perfil" class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+                    </td>
                   </tr>
 
                 </tbody>
@@ -159,12 +168,7 @@
 
 
 
-                        {{-- <div class="form-group row">
-                            <div class="col-md-6">
-                                <label for="formFile" class="form-label">Imagen perfil</label>
-                                <input name="imagen_perfil" class="form-control" type="file" id="formFile">
-                            </div>
-                        </div>
+                        {{--
 
                         <div class="form-group row">
                             <div class="col-md-6">

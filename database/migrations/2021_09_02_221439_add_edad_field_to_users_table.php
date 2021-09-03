@@ -18,6 +18,8 @@ class AddEdadFieldToUsersTable extends Migration
             $table->string('numero');
             $table->string('cargo');
             $table->string('institucion');
+            $table->string('imagen_perfil');
+
         });
     }
 
@@ -33,6 +35,7 @@ class AddEdadFieldToUsersTable extends Migration
             $table->dropColumn('numero');
             $table->dropColumn('cargo');
             $table->dropColumn('institucion');
+            $table->dropColumn('imagen_perfil');
         });
     }
 }
