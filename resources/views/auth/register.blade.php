@@ -7,6 +7,26 @@
   position: absolute;
 }
 </style>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-none navbar-center  " style="padding: 0;">
+    <div class="container-fluid linedown " >
+        <div " class=" row mb-0 d-flex justify-content-center" style="background-color: white; padding: 0;">
+            <div class="offset-lg-0 col-sm-12 col-md-12 col-lg-6 col-xl-6 ml-0 " style="background-color: white">
+                <img class=" logos2 ocultar"   src="../../images/poderjudlogo.png" alt="" srcset="">
+            </div>
+            <div class="col-12 col-sm-12 mt-3 col-md-6 col-lg-6 col-xl-6 offset-lg-0" style="max-width: 460px; background-color: white">
+                <img class="rounded   col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " src="../../images/escuelajulogo.png" alt="" srcset="">
+            </div>
+        </div>
+
+
+
+</div>
+<div class="justify-content-center">
+
+
+
+
+
 <div class="container rounded">
     <div class="row justify-content-center">
         <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
