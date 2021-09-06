@@ -59,6 +59,13 @@ class RegisterController extends Controller
             'numero'=> ['required'],
             'cargo'=> ['required'],
             'institucion'=> ['required'],
+            'imagen_perfil'=> ['required'],
+            'acta_nac'=> ['required'],
+            'cedula'=> ['required'],
+            'credencial'=> ['required'],
+            'carta_expo'=> ['required'],
+            'fotografia'=> ['required'],
+            'curp'=> ['required'],
         ]);
     }
 
@@ -80,6 +87,12 @@ class RegisterController extends Controller
             'cargo'=> $data['cargo'],
             'institucion'=> $data['institucion'],
             'imagen_perfil'=> $data["imagen_perfil"]->store('imagenes'),
+            'acta_nac'=> $data["acta_nac"]->store('actas'),
+            'cedula'=> $data["cedula"]->store('cedulas'),
+            'credencial'=> $data["credencial"]->store('credenciales'),
+            'carta_expo'=> $data["carta_expo"]->store('cartas'),
+            'fotografia'=> $data["fotografia"]->store('fotografias'),
+            'curp'=> $data["curp"]->store('curps'),
 
         ]);
     }

@@ -19,6 +19,12 @@ class AddEdadFieldToUsersTable extends Migration
             $table->string('cargo');
             $table->string('institucion');
             $table->string('imagen_perfil');
+            $table->string('acta_nac');
+            $table->string('cedula');
+            $table->string('credencial');
+            $table->string('carta_expo');
+            $table->string('fotografia');
+            $table->string('curp');
 
         });
     }
@@ -36,6 +42,12 @@ class AddEdadFieldToUsersTable extends Migration
             $table->dropColumn('cargo');
             $table->dropColumn('institucion');
             $table->dropColumn('imagen_perfil');
+            $table->dropColumn('acta_nac');
+            $table->dropColumn('cedula');
+            $table->dropColumn('credencial');
+            $table->dropColumn('carta_expo');
+            $table->dropColumn('fotografia');
+            $table->dropColumn('curp');
         });
     }
 }
