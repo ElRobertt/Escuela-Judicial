@@ -7,7 +7,7 @@
 @section('content')
 
     <div class="container small " style="padding:4em 2rem">
-        <div class="row mt-2">
+        <div class="row mt-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
               </svg>
@@ -30,7 +30,8 @@
         <p class="text-secondary text-center " style="margin-bottom: 40px">Asistentes: {{$curso->vigencia}}</p>
 
                 <div class=" text-center col-xl-12">
-                    <button class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds">inscribirse</button>
+                    <button id="vsb" class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds">inscribirse</button>
+                    <button id="vsb2" class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds" hidden disable>Inscrito</button>
                 </div>
 
         </div>
@@ -51,11 +52,12 @@
                                 <th class="d-none d-lg-block">ID</th>
                                 <th>Nombre</th>
                                 <th>Email</th>
-
+                                <th>Inscrito</th>
                                 <th class="text-center">Calificacion</th>
                                 <th class="text-center d-none d-lg-block">Completado</th>
                                 <th class="text-center">Acreditacion</th>
                             </tr>
+
                         </thead>
                         <tbody>
                             @foreach ($users as $user)
@@ -63,13 +65,18 @@
                                 <td class="d-none d-lg-block">{{$user->id}}</td>
                                 <td><a href="{{ route('usuario.show', $user)}}">{{$user->name}}</a></td>
                                 <td>{{$user->email}}</td>
+                                <td><input id="inscrito"  name="Inscrito" value="1" required autocomplete="name"></td>
+
                                 <td class="text-center">9</td>
+
                                 <td class="d-none d-lg-block">
                                     <div class="text-center">
                                         @if ($user->pivot->completado==1)
                                             <a>Si</a>
+
                                         @else
                                             <a>No</a>
+
                                         @endif
 
                                     </div>
@@ -94,6 +101,22 @@
                                     @endif
                                 </td>
                             </tr>
+                            <script>
+                                    let inscrito = document.getElementById('inscrito');
+                                    switch (inscrito) {
+                                        case 1:
+                                        vsb.style.visibility = "hidden";
+                                        vsb2.style.visibility = "visible";
+                                            break;
+
+                                        default:
+                                        vsb.style.visibility = "visible";
+                                        vsb2.style.visibility = "hidden";
+                                            break;
+                                    }
+
+                            </script>
+
                             @endforeach
                         </tbody>
                     </table>
@@ -120,7 +143,14 @@
 
     @endif
     @endif
+    {{-- <script>
+        var inscrito = document.getElementById('inscrito');
+        if (inscrito = true) {
 
+        } else {
+
+        }
+    </script> --}}
 
 
         <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
@@ -192,6 +222,10 @@
                     <input id="curso_id" type="hidden" name="curso_id" value="{{$curso->id}}" required autocomplete="name">
                     <input id="user_id" type="hidden" name="user_id" value="{{auth()->user()->id}}" required autocomplete="name">
                     <input id="completado" type="hidden" name="completado" value="0" required autocomplete="name">
+
+
+
+
                     <button class="btn btn-primary btn-lg btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIda">inscribirse</button>
 
                 </form>
@@ -219,6 +253,7 @@
         <div class="modal-body text-center">
             <h1 style="color:#aaa; font-family:montserrat">Registro exitoso</h1>
             <h5 style="color:#aaa; font-family:montserrat">Los detalles del curso fueron enviados correctamente a tu email.</h5>
+            <input id="inscrito" hidden name="Inscrito" value="true" required autocomplete="name">
 
             <a href="{{ route('curso.index')}}">Seguir Explorando <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>

@@ -1,4 +1,4 @@
-<div class="container " style="padding:4em 2rem; margin-top:50px !important">
+<div class="container " style="padding:4em 2rem; margin-top:80px !important">
     <h3 >Ingresa los datos siguientes</h3>
 
     <div class="row">
@@ -10,7 +10,33 @@
 
         <div class="col-12 text-left offset-lg-3 col-lg-3 mt-2">
             <label for="formFile" class="form-label">Imagen curso</label>
-            <input name="imagen_curso"class="form-control" type="file" id="formFile">
+            <input id="formFiless98" name="imagen_curso"class="form-control" type="file" id="formFile">
+            <img class="img-fluid img-thumbnail" style="max-height: 250px"  id="imgprew">
+
+                                        <script>
+                                            // Obtener referencia al input y a la imagen
+                                    const $formFiless98 = document.querySelector("#formFiless98"),
+                                    $imagenPrevisualizacion298 = document.querySelector("#imgprew");
+
+                                    // Escuchar cuando cambie
+                                    $formFiless98.addEventListener("change", () => {
+                                    // Los archivos seleccionados, pueden ser muchos o uno
+                                    const archivos = $formFiless98.files;
+                                    // Si no hay archivos salimos de la función y quitamos la imagen
+                                    if (!archivos || !archivos.length) {
+                                        $imagenPrevisualizacion298.src = "";
+                                        return;
+                                    }
+                                    // Ahora tomamos el primer archivo, el cual vamos a previsualizar
+                                    const primerArchivo = archivos[0];
+                                    // Lo convertimos a un objeto de tipo objectURL
+                                    const objectURL = URL.createObjectURL(primerArchivo);
+                                    // Y a la fuente de la imagen le ponemos el objectURL
+                                    $imagenPrevisualizacion298.src = objectURL;
+
+                                    });
+
+                                        </script>
         </div>
 
         <div class="col-12 text-left offset-lg-0 col-lg-3 mt-2">

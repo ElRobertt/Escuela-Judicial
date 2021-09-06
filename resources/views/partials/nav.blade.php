@@ -7,7 +7,7 @@
 </style>
 <div class="justify-content-center">
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-none navbar-center  " style="padding: 0;">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-none navbar-center  " style="padding: 0;" >
     <div class="container-fluid linedown " >
         <div " class=" row mb-0 d-flex justify-content-center" style="background-color: white; padding: 0;">
             <div class="offset-lg-0 col-sm-12 col-md-12 col-lg-6 col-xl-6 ml-0 " style="background-color: white">
@@ -19,13 +19,13 @@
         </div>
         <div class="row " style="background-color: white !important"">
             <div class="ocul  col-12 col-sm-12 col-lg-2 col-xl-2 text-center ass " style="background-color: white ; " >
-                <a style="font-size:16px !important" class="btn basj nav-link" data-toggle="collapse" href="#multiCollapseExample1" data-target=".multi-collapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"> <svg  xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4c0d0d" class="bi bi-list mt-1" viewBox="0 0 16 16">
+                <a style="font-size:16px !important" class="btn  nav-link" data-toggle="collapse" href="#multiCollapseExample1" data-target=".multi-collapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"> <svg  xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4c0d0d" class="bi bi-list mt-1" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                   </svg></a>
             </div>
         </div>
-        <div class=" row d-flex justify-content-left  " style="background-color: rgba(187, 150, 80); ">
-            <div class="col-12 col-sm-12 col-lg-2 col-xl-2 mt-1 collapse multi-collapse " id="multiCollapseExample1" >
+        <div class=" row d-flex justify-content-left  " style="background-color: rgba(187, 150, 80); " >
+            <div class="col-12 col-sm-12 col-lg-2 col-xl-2 mt-1  multi-collapse " id="multiCollapseExample1" >
                 <div class="ml-3 " id="navbarTogglerDemo01">
                     <ul class="navbar-nav  ">
                       <li class="nav-item col-12 ml-5 {{ setActive('inicio.*')}}">

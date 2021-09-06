@@ -22,11 +22,7 @@
                             <th>Email</th>
                             <th>Role</th>
                             <th>
-                                <form class="form-inline d-flex justify-content-center md-form form-sm active active-pink-2 mt-2">
-                                    <i class="fas fa-search" aria-hidden="true"></i>
-                                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-                                      aria-label="Search">
-                                  </form>
+
 
                             </th>
 
@@ -38,7 +34,12 @@
                                 <td>{{$user->id}}"</td>
                                 <td><a href="{{ route('usuario.show', $user)}}">{{$user->name}}</a></td>
                                 <td>{{$user->email}}</td>
-                                <td>{{$user->role_id}}</td>
+                                @if ($user->role_id==1)
+                                    <td>Admin</td>
+                                @else
+                                <td>User</td>
+                                @endif
+                                {{-- <td>{{$user->role_id}}</td> --}}
                             </tr>
                         @endforeach
                     </tbody>

@@ -18,7 +18,7 @@
                         <img class=""  src="images/c1.jpeg" alt="primer slide" style="height: 350px" >
                     </div>
                     <div class="carousel-item">
-                        <img class="" src="images/c2.jpeg" alt="segundo slide" style="height: 350px">
+                        <img class="img-fluid img-thumbnail" src="images/c2.jpeg" alt="segundo slide" style="max-height: 350px">
                     </div>
 
                     </div>
