@@ -19,12 +19,12 @@ class AddEdadFieldToUsersTable extends Migration
             $table->string('cargo');
             $table->string('institucion');
             $table->string('imagen_perfil');
-            $table->string('acta_nac');
-            $table->string('cedula');
-            $table->string('credencial');
-            $table->string('carta_expo');
-            $table->string('fotografia');
-            $table->string('curp');
+             $table->string('acta_nac');
+             $table->string('cedula');
+             $table->string('credencial');
+             $table->string('carta_expo');
+             $table->string('fotografia');
+             $table->string('curp');
 
         });
     }

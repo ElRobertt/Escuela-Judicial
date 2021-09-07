@@ -113,7 +113,7 @@
                     </td>
                     <td>
                         <div class="form-group row">
-                            <label for="email" class="col-12 col-form-label-sm text-md-left">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-12 col-form-label-sm text-md-left">Correo Electronico</label>
 
                             <div class="col-12">
                                 <input id="email" type="email" class="col-12 col-lg-7  form-control-sm @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -178,10 +178,20 @@
                         <div class="form-group row">
 
                             <label for="cargo" class="col-12 col-form-label-sm text-md-left">Cargo que desempeña</label>
+                            <div class="col-md-12">
+                                <select style="border: 2px solid" id="cargo" type="" class="col-12 col-lg-7  form-control-sm" name="cargo" required autocomplete="">
+                                    <option value="value1">Juez</option>
+                                    <option value="value2" selected>Magistrado</option>
+                                    <option value="value3">Secretario</option>
+                                    <option value="value4">Proyectista</option>
+                                    <option value="value5" >Notificadores y/o Actuarios</option>
+                                    <option value="value6">Administrativos</option>
+                                    <option value="value7">Personal Externo</option>
 
-                            <div class="col-12">
-                                <input id="cargo" type="" class="col-12 col-lg-7  form-control-sm" name="cargo" required autocomplete="">
+                                  </select>
+
                             </div>
+
                         </div>
                     </td>
                     <td>
@@ -209,9 +219,9 @@
                 </div>
 
                   <div class="col-10 mt-2">
-                    <section class="row">
-                    <ul class="nav nav-tabs">
-                        <li class="active ml-3"><a id="CP1" href="#tab-1">
+                    <section class="row text-center">
+                    <ul class="nav nav-tabs text-center">
+                        <li class="active ml-3 text-center"><a id="CP1" href="#tab-1">
                             <svg id="check1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
                                 <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                               </svg>
@@ -221,20 +231,20 @@
                             <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                           </svg>COPIA CERTIFICADA CEDULA/TITULO |</a></li>
 
-                        {{-- <li class="ml-3"><a id="CP3" href="#tab-3"><svg id="check1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
+                         <li class="ml-3"><a id="CP3" href="#tab-3"><svg id="check3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
                             <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                           </svg>COPIA CREDENCIAL DEL ELECTOR |</a></li>
 
                         <li class="ml-3"><a id="CP4" href="#tab-4">
-                            <svg id="check1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
+                            <svg id="check4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
                                 <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                               </svg>CARTA EXPOSICION MOTIVOS |</a></li>
-                        <li class="ml-3"><a id="CP5"href="#tab-5"><svg id="check1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
+                        <li class="ml-3"><a id="CP5"href="#tab-5"><svg id="check5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
                             <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                           </svg>FOTOGRAFIAS TAMAÑO CREDENCIAL BLANCO Y NEGRO |</a></li>
-                        <li class="ml-3"><a id="CP2" href="#tab-6"><svg id="check1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
+                        <li class="ml-3"><a id="CP6" href="#tab-6"><svg id="check6" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
                             <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                          </svg>COPIA SIMPLE CURP |</a></li> --}}
+                          </svg>COPIA SIMPLE CURP |</a></li>
 
                     </ul>
 
@@ -348,19 +358,88 @@
                             <span class="col-md-10">
                                 <div class="form-group row " id="2">
                                     <div class="col-md-12">
-                                        <label for="formFile" class="form-label">COPIA CREDENCIAL DEL ELECTOR </label>
-                                        <input name="credencial" class="form-control" type="file" id="formFile">
+                                        <h6  class="text-center"> <b> COPIA CREDENCIAL DEL ELECTOR <br> <a type="button" class="col-1" data-toggle="modal" style="background-color: transparent !important; border-color:none !important" data-target="#MDLHELP">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#4c0d0d" class="text-left bi bi-question-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                                              </svg>
+                                            </a></h6>
+                                        <input name="credencial" class="form-control" type="file" id="formFiles3">     <img class="img-fluid img-thumbnail" style="max-height: 250px"  id="imagenPrevisualizacion3">
+
+                                        <script>
+                                            // Obtener referencia al input y a la imagen
+                                    const $seleccionArchivos3 = document.querySelector("#formFiles3"),
+                                    $imagenPrevisualizacion3 = document.querySelector("#imagenPrevisualizacion3");
+
+                                    // Escuchar cuando cambie
+                                    $seleccionArchivos3.addEventListener("change", () => {
+                                    // Los archivos seleccionados, pueden ser muchos o uno
+                                    const archivos = $seleccionArchivos3.files;
+                                    // Si no hay archivos salimos de la función y quitamos la imagen
+                                    if (!archivos || !archivos.length) {
+                                        $imagenPrevisualizacion3.src = "";
+                                        return;
+                                    }
+                                    // Ahora tomamos el primer archivo, el cual vamos a previsualizar
+                                    const primerArchivo = archivos[0];
+                                    // Lo convertimos a un objeto de tipo objectURL
+                                    const objectURL = URL.createObjectURL(primerArchivo);
+                                    // Y a la fuente de la imagen le ponemos el objectURL
+                                    $imagenPrevisualizacion3.src = objectURL;
+                                    var intro = document.getElementById('CP3');
+                                        intro.style.cssText = 'color: green;';
+                                        var check = document.getElementById('check3');
+                                        check.style.visibility = "visible";
+                                    });
+
+                                        </script>
                                     </div>
                                 </div>
                             </span>
                         </div>
+                    </div>
+                    <div class="tab-content">
                         <div id="tab-4" class="tab-pane">
                             <span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
                             <span class="col-md-10">
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label for="formFile" class="form-label">CARTA EXPOSICION MOTIVOS</label>
-                                        <input name="carta_expo" class="form-control" type="file" id="formFile">
+                                        <h6  class="text-center"> <b> CARTA EXPOSICION MOTIVOS <br> <a type="button" class="col-1" data-toggle="modal" style="background-color: transparent !important; border-color:none !important" data-target="#MDLHELP">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#4c0d0d" class="text-left bi bi-question-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                                              </svg>
+                                            </a></h6>
+                                        <input name="carta_expo" class="form-control" type="file" id="formFiles4">
+                                        <img class="img-fluid img-thumbnail" style="max-height: 250px"  id="imagenPrevisualizacion4">
+
+                                        <script>
+                                            // Obtener referencia al input y a la imagen
+                                    const $seleccionArchivos4 = document.querySelector("#formFiles4"),
+                                    $imagenPrevisualizacion4 = document.querySelector("#imagenPrevisualizacion4");
+
+                                    // Escuchar cuando cambie
+                                    $seleccionArchivos4.addEventListener("change", () => {
+                                    // Los archivos seleccionados, pueden ser muchos o uno
+                                    const archivos = $seleccionArchivos4.files;
+                                    // Si no hay archivos salimos de la función y quitamos la imagen
+                                    if (!archivos || !archivos.length) {
+                                        $imagenPrevisualizacion4.src = "";
+                                        return;
+                                    }
+                                    // Ahora tomamos el primer archivo, el cual vamos a previsualizar
+                                    const primerArchivo = archivos[0];
+                                    // Lo convertimos a un objeto de tipo objectURL
+                                    const objectURL = URL.createObjectURL(primerArchivo);
+                                    // Y a la fuente de la imagen le ponemos el objectURL
+                                    $imagenPrevisualizacion4.src = objectURL;
+                                    var intro = document.getElementById('CP4');
+                                        intro.style.cssText = 'color: green;';
+                                        var check = document.getElementById('check4');
+                                        check.style.visibility = "visible";
+                                    });
+
+                                        </script>
                                     </div>
                                 </div>
                             </span>
@@ -372,24 +451,93 @@
                             <span class="col-md-10">
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label for="formFile" class="form-label">FOTOGRAFIAS TAMAÑO CREDENCIAL BLANCO Y NEGRO</label>
-                                        <input name="fotografia" class="form-control" type="file" id="formFile">
+                                        <h6  class="text-center"> <b> FOTOGRAFIA TAMAÑO CREDENCIAL EN BLANCO Y NEGRO <br> <a type="button" class="col-1" data-toggle="modal" style="background-color: transparent !important; border-color:none !important" data-target="#MDLHELP">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#4c0d0d" class="text-left bi bi-question-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                                              </svg>
+                                            </a></h6>
+                                        <input name="fotografia" class="form-control" type="file" id="formFiles5">
+                                        <img class="img-fluid img-thumbnail" style="max-height: 250px"  id="imagenPrevisualizacion5">
+
+                                        <script>
+                                            // Obtener referencia al input y a la imagen
+                                    const $seleccionArchivos5 = document.querySelector("#formFiles5"),
+                                    $imagenPrevisualizacion5 = document.querySelector("#imagenPrevisualizacion5");
+
+                                    // Escuchar cuando cambie
+                                    $seleccionArchivos5.addEventListener("change", () => {
+                                    // Los archivos seleccionados, pueden ser muchos o uno
+                                    const archivos = $seleccionArchivos5.files;
+                                    // Si no hay archivos salimos de la función y quitamos la imagen
+                                    if (!archivos || !archivos.length) {
+                                        $imagenPrevisualizacion5.src = "";
+                                        return;
+                                    }
+                                    // Ahora tomamos el primer archivo, el cual vamos a previsualizar
+                                    const primerArchivo = archivos[0];
+                                    // Lo convertimos a un objeto de tipo objectURL
+                                    const objectURL = URL.createObjectURL(primerArchivo);
+                                    // Y a la fuente de la imagen le ponemos el objectURL
+                                    $imagenPrevisualizacion5.src = objectURL;
+                                    var intro = document.getElementById('CP5');
+                                        intro.style.cssText = 'color: green;';
+                                        var check = document.getElementById('check5');
+                                        check.style.visibility = "visible";
+                                    });
+
+                                        </script>
                                     </div>
                                 </div>
                             </span>
                         </div>
+                    </div>
 
 
 
 
-
+                    <div class="tab-content">
                         <div id="tab-6" class="tab-pane">
                             <span class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"></span>
                             <span class="col-md-10">
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label for="formFile" class="form-label">COPIA SIMPLE CURP</label>
-                                        <input name="curp" class="form-control" type="file" id="formFile">
+                                        <h6  class="text-center"> <b> COPIA SIMPLE CURP <br> <a type="button" class="col-1" data-toggle="modal" style="background-color: transparent !important; border-color:none !important" data-target="#MDLHELP">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#4c0d0d" class="text-left bi bi-question-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                                              </svg>
+                                            </a></h6>
+                                        <input name="curp" class="form-control" type="file" id="formFiles6">
+                                        <img class="img-fluid img-thumbnail" style="max-height: 250px"  id="imagenPrevisualizacion6">
+
+                                        <script>
+                                            // Obtener referencia al input y a la imagen
+                                    const $seleccionArchivos6 = document.querySelector("#formFiles6"),
+                                    $imagenPrevisualizacion6 = document.querySelector("#imagenPrevisualizacion6");
+
+                                    // Escuchar cuando cambie
+                                    $seleccionArchivos6.addEventListener("change", () => {
+                                    // Los archivos seleccionados, pueden ser muchos o uno
+                                    const archivos = $seleccionArchivos6.files;
+                                    // Si no hay archivos salimos de la función y quitamos la imagen
+                                    if (!archivos || !archivos.length) {
+                                        $imagenPrevisualizacion6.src = "";
+                                        return;
+                                    }
+                                    // Ahora tomamos el primer archivo, el cual vamos a previsualizar
+                                    const primerArchivo = archivos[0];
+                                    // Lo convertimos a un objeto de tipo objectURL
+                                    const objectURL = URL.createObjectURL(primerArchivo);
+                                    // Y a la fuente de la imagen le ponemos el objectURL
+                                    $imagenPrevisualizacion6.src = objectURL;
+                                    var intro = document.getElementById('CP6');
+                                        intro.style.cssText = 'color: green;';
+                                        var check = document.getElementById('check6');
+                                        check.style.visibility = "visible";
+                                    });
+
+                                        </script>
                                     </div>
                                 </div>
                             </span>
