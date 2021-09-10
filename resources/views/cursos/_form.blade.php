@@ -61,7 +61,7 @@
                  <option value="">Dirigido</option>
                  @foreach ($dirigidos as $id => $name)
 
-                     <option value="{{$id}}" @if ($id===$curso->dirigido_id) selected @endif
+                     <option type="checkbox" value="{{$id}}" @if ($id===$curso->dirigido_id) selected @endif
                      >{{$name}}</option>
 
 

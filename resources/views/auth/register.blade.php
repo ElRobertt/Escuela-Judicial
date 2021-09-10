@@ -176,19 +176,23 @@
 
                     <td>
                         <div class="form-group row">
+                            {{-- {{$dirigidos}} --}}
 
                             <label for="cargo" class="col-12 col-form-label-sm text-md-left">Cargo que desempeña</label>
                             <div class="col-md-12">
-                                <select style="border: 2px solid" id="cargo" type="" class="col-12 col-lg-7  form-control-sm" name="cargo" required autocomplete="">
-                                    <option value="value1">Juez</option>
-                                    <option value="value2" selected>Magistrado</option>
-                                    <option value="value3">Secretario</option>
-                                    <option value="value4">Proyectista</option>
-                                    <option value="value5" >Notificadores y/o Actuarios</option>
-                                    <option value="value6">Administrativos</option>
-                                    <option value="value7">Personal Externo</option>
+                                <select
+                                name="cargo"
+                                id="dirigido_id"
+                                class="form-control offset-lg-0 col-lg-12 mb-3"
+                                >
 
-                                  </select>
+                                @foreach ($dirigidos as $id => $name)
+
+                                    <option value="{{$id}}">{{$name}}</option>
+
+
+                                @endforeach
+                            </select>
 
                             </div>
 

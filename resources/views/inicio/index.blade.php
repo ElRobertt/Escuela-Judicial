@@ -38,26 +38,180 @@
             <h1 class="txtprimary ml-1 mt-5">Lista de cursos y diplomados</h1>
         </div>
             <div class="row mt-1 " >
+                @switch(Auth()->user()->cargo)
+                @case(1)
                     @forelse ($inicio as $inicioItem)
-                    <div class="col-12 col-sm-12 col-lg-3 col-xs-3  ">
-                            <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:450px !important; object-fit:cover">
-                                @if ($inicioItem->imagen_curso)
+                        @if ($inicioItem->dirigido_id==1)
+                            <div class="col-12 col-sm-12 col-lg-3 col-xs-3  ">
+                                <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:450px !important; object-fit:cover">
+                                    @if ($inicioItem->imagen_curso)
 
-                                    <img class="card-img-top" src="/storage/{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">
-                                @endif
-                                <div class="card-body">
-                                    <h5 class="card-title text-center bls">Nombre Curso:<br>{{$inicioItem->nombre_curso}}</h5>
-                                    <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
-                                    <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
-                                    <div class="text-center">
-                                        <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
+                                        <img class="card-img-top" src="/storage/{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">
+                                    @endif
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center bls">Nombre Curso:<br>{{$inicioItem->nombre_curso}}</h5>
+                                        <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
+                                        <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
+                                        <div class="text-center">
+                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                    </div>
-
-                    @empty
+                        @endif
+                        @empty
+                        No hay Cursos Disponibles
                     @endforelse
+                    @break
+                @case(2)
+                    @forelse ($inicio as $inicioItem)
+                        @if ($inicioItem->dirigido_id==2)
+                            <div class="col-12 col-sm-12 col-lg-3 col-xs-3  ">
+                                <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:450px !important; object-fit:cover">
+                                    @if ($inicioItem->imagen_curso)
+
+                                        <img class="card-img-top" src="/storage/{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">
+                                    @endif
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center bls">Nombre Curso:<br>{{$inicioItem->nombre_curso}}</h5>
+                                        <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
+                                        <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
+                                        <div class="text-center">
+                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @empty
+                    No hay Cursos Disponibles
+                    @endforelse
+                        @break
+                @case(3)
+                    @forelse ($inicio as $inicioItem)
+                        @if ($inicioItem->dirigido_id==3)
+                            <div class="col-12 col-sm-12 col-lg-3 col-xs-3  ">
+                                <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:450px !important; object-fit:cover">
+                                    @if ($inicioItem->imagen_curso)
+
+                                        <img class="card-img-top" src="/storage/{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">
+                                    @endif
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center bls">Nombre Curso:<br>{{$inicioItem->nombre_curso}}</h5>
+                                        <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
+                                        <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
+                                        <div class="text-center">
+                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @empty
+                    No hay Cursos Disponibles
+                    @endforelse
+                        @break
+                @case(4)
+                    @forelse ($inicio as $inicioItem)
+                        @if ($inicioItem->dirigido_id==4)
+                            <div class="col-12 col-sm-12 col-lg-3 col-xs-3  ">
+                                <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:450px !important; object-fit:cover">
+                                    @if ($inicioItem->imagen_curso)
+
+                                        <img class="card-img-top" src="/storage/{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">
+                                    @endif
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center bls">Nombre Curso:<br>{{$inicioItem->nombre_curso}}</h5>
+                                        <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
+                                        <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
+                                        <div class="text-center">
+                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @empty
+                    No hay Cursos Disponibles
+                    @endforelse
+                        @break
+                @case(5)
+                    @forelse ($inicio as $inicioItem)
+                        @if ($inicioItem->dirigido_id==5)
+                            <div class="col-12 col-sm-12 col-lg-3 col-xs-3  ">
+                                <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:450px !important; object-fit:cover">
+                                    @if ($inicioItem->imagen_curso)
+
+                                        <img class="card-img-top" src="/storage/{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">
+                                    @endif
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center bls">Nombre Curso:<br>{{$inicioItem->nombre_curso}}</h5>
+                                        <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
+                                        <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
+                                        <div class="text-center">
+                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @empty
+                    No hay Cursos Disponibles
+                    @endforelse
+                        @break
+                @case(6)
+                    @forelse ($inicio as $inicioItem)
+                        @if ($inicioItem->dirigido_id==6)
+                            <div class="col-12 col-sm-12 col-lg-3 col-xs-3  ">
+                                <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:450px !important; object-fit:cover">
+                                    @if ($inicioItem->imagen_curso)
+
+                                        <img class="card-img-top" src="/storage/{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">
+                                    @endif
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center bls">Nombre Curso:<br>{{$inicioItem->nombre_curso}}</h5>
+                                        <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
+                                        <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
+                                        <div class="text-center">
+                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @empty
+                    No hay Cursos Disponibles
+                    @endforelse
+                        @break
+                @case(7)
+                    @forelse ($inicio as $inicioItem)
+                        @if ($inicioItem->dirigido_id==7)
+                            <div class="col-12 col-sm-12 col-lg-3 col-xs-3  ">
+                                <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:450px !important; object-fit:cover">
+                                    @if ($inicioItem->imagen_curso)
+
+                                        <img class="card-img-top" src="/storage/{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">
+                                    @endif
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center bls">Nombre Curso:<br>{{$inicioItem->nombre_curso}}</h5>
+                                        <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
+                                        <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
+                                        <div class="text-center">
+                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @empty
+                    No hay Cursos Disponibles
+                    @endforelse
+                        @break
+
+                @default
+                    Default case...
+                @endswitch
+
             </div>
 
 
