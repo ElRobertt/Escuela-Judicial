@@ -49,33 +49,19 @@
         <p class="text-secondary text-center">Horas del curso: {{$curso->horas_curso}}</p>
         <p class="text-secondary text-center">Materia: {{$curso->materia}}</p>
         <p class="text-secondary text-center " >Asistentes: {{$curso->vigencia}}</p>
-        <h6 id="enls" class="text-center" > <b>ENLACES</h6>
-        <p id="enls2" class="text-secondary text-center" >Link Conferencias: {{$curso->videoconferencia}}</p>
-        <p id="enls3" class="text-secondary text-center" style="margin-bottom: 40px " disabled>Carpeta Drive: {{$curso->drive}}</p>
-
-        <div class=" text-center col-xl-12">
-            <br>
-
-
-            <button id="inscr" class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds">inscribirse</button>
-
-
-
+                    <br>
+            <button id="inscr" class="btn btn-primary btn-sm btn-block colorbtnp " data-toggle="modal" data-target="#modelIds">inscribirse</button>
             @foreach ($users as $user)
-
-
             @while ( $user->email == auth()->user()->email)
+                <h6 id="enls" class="text-center" > <b>ENLACES</h6>
+                <p id="enls2" class="text-secondary text-center" >Link Conferencias: {{$curso->videoconferencia}}</p>
+                <p id="enls3" class="text-secondary text-center" style="margin-bottom: 40px " disabled>Carpeta Drive: {{$curso->drive}}</p>
+                <button  class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds" disabled>Inscrito</button>
 
-            <button  class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds" disabled>Inscrito</button>
             <script>
-
-                document.getElementById("enls").style.visibility = "visible";
-                document.getElementById("enls2").style.visibility = "visible";
-                document.getElementById("enls3").style.visibility = "visible";
-
-
                 var inscr = document.getElementById('inscr');
                 inscr.style.visibility = 'hidden';
+                inscr.style.display = "none";
             </script>
 
             @break
@@ -91,7 +77,7 @@
 
 
 
-        </div>
+
 
         </div>
     </div>
