@@ -14,7 +14,7 @@
         </div>
         <div class="row d-flex justify-content-center align-items-center ">
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
-                <h2 class="text-center "> {{$curso->nombre_curso}}</h2>
+                <h2 id="h2s" class="text-center "> {{$curso->nombre_curso}}</h2>
                   @if ($curso->imagen_curso)
             <img class="card-img-top text-center" src="/storage/{{$curso->imagen_curso}}" alt="{{$curso->nombre_curso}}">
         @endif
@@ -24,23 +24,85 @@
 
 
         <p class="text-secondary mt-5 text-center">Nombre docente: {{$curso->docente}}</p>
-        <p class="text-secondary text-center ">Dirigido a: {{$curso->dirigido_id}}</p>
+        @switch($curso->dirigido_id)
+            @case(1)
+            <p class="text-secondary text-center ">Dirigido a: Magistrados</p>
+                @break
+            @case(2)
+            <p class="text-secondary text-center ">Dirigido a: Jueces</p>
+                @break
+             @case(3)
+            <p class="text-secondary text-center ">Dirigido a: Secretarios</p>
+                @break
+                 @case(4)
+            <p class="text-secondary text-center ">Dirigido a: Proyectistas</p>
+                @break
+                 @case(5)
+            <p class="text-secondary text-center ">Dirigido a: Notificadores y/o Actuarios</p>
+                @break
+                 @case(6)
+            <p class="text-secondary text-center ">Dirigido a: Administrativos</p>
+                @break
+            @default
+
+        @endswitch
         <p class="text-secondary text-center">Horas del curso: {{$curso->horas_curso}}</p>
         <p class="text-secondary text-center">Materia: {{$curso->materia}}</p>
-        <p class="text-secondary text-center " style="margin-bottom: 40px">Asistentes: {{$curso->vigencia}}</p>
+        <p class="text-secondary text-center " >Asistentes: {{$curso->vigencia}}</p>
+        <h6 id="enls" class="text-center" > <b>ENLACES</h6>
+        <p id="enls2" class="text-secondary text-center" >Link Conferencias: {{$curso->videoconferencia}}</p>
+        <p id="enls3" class="text-secondary text-center" style="margin-bottom: 40px " disabled>Carpeta Drive: {{$curso->drive}}</p>
 
-                <div class=" text-center col-xl-12">
-                    <button id="vsb" class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds">inscribirse</button>
-                    <button id="vsb2" class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds" hidden disable>Inscrito</button>
-                </div>
+        <div class=" text-center col-xl-12">
+            <br>
+
+
+            <button id="inscr" class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds">inscribirse</button>
+
+
+
+            @foreach ($users as $user)
+
+
+            @while ( $user->email == auth()->user()->email)
+
+            <button  class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds" disabled>Inscrito</button>
+            <script>
+
+                document.getElementById("enls").style.visibility = "visible";
+                document.getElementById("enls2").style.visibility = "visible";
+                document.getElementById("enls3").style.visibility = "visible";
+
+
+                var inscr = document.getElementById('inscr');
+                inscr.style.visibility = 'hidden';
+            </script>
+
+            @break
+            @endwhile
+
+            @endforeach
+
+
+
+
+
+
+
+
+
+        </div>
 
         </div>
     </div>
+    </div>
 
 
-         {{-- {{$users}} --}}
-         <div class="container">
+          {{-- {{$users}} --}}
+
+
             @if (auth()->user()->hasRoles(1))
+            <div class="container">
             <div class="row mt-5">
                 <h1>Usuarios</h1>
             </div>
@@ -51,8 +113,8 @@
                             <tr>
                                 <th class="d-none d-lg-block">ID</th>
                                 <th>Nombre</th>
+
                                 <th>Email</th>
-                                <th>Inscrito</th>
                                 <th class="text-center">Calificacion</th>
                                 <th class="text-center d-none d-lg-block">Completado</th>
                                 <th class="text-center">Acreditacion</th>
@@ -61,14 +123,14 @@
                         </thead>
                         <tbody>
                             @foreach ($users as $user)
+
                             <tr>
                                 <td class="d-none d-lg-block">{{$user->id}}</td>
                                 <td><a href="{{ route('usuario.show', $user)}}">{{$user->name}}</a></td>
                                 <td>{{$user->email}}</td>
-                                <td><input id="inscrito"  name="Inscrito" value="1" required autocomplete="name"></td>
+
 
                                 <td class="text-center">9</td>
-
                                 <td class="d-none d-lg-block">
                                     <div class="text-center">
                                         @if ($user->pivot->completado==1)
@@ -94,6 +156,7 @@
                                         <div class="text-center">
                                             <input id="completado" type="hidden" name="completado" value="1" required autocomplete="name">
                                             <button class="btn btn-primary btn-sm colorbtnp mb-1" >Acreditar</button>
+
                                         </div>
                                     </form>
 
@@ -101,22 +164,6 @@
                                     @endif
                                 </td>
                             </tr>
-                            <script>
-                                    let inscrito = document.getElementById('inscrito');
-                                    switch (inscrito) {
-                                        case 1:
-                                        vsb.style.visibility = "hidden";
-                                        vsb2.style.visibility = "visible";
-                                            break;
-
-                                        default:
-                                        vsb.style.visibility = "visible";
-                                        vsb2.style.visibility = "hidden";
-                                            break;
-                                    }
-
-                            </script>
-
                             @endforeach
                         </tbody>
                     </table>
@@ -141,8 +188,13 @@
             </div>
         </div>
 
+
+
     @endif
     @endif
+
+
+
     {{-- <script>
         var inscrito = document.getElementById('inscrito');
         if (inscrito = true) {
@@ -185,11 +237,6 @@
             </div>
         </div>
     </div>
-
-   <!-- Button trigger modal -->
-
-
-  <!-- Modal -->
   <div class="modal fade" id="modelIds" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content" style="">
