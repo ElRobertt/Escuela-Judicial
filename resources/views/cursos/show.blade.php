@@ -6,52 +6,64 @@
 
 @section('content')
 
-    <div class="container small " style="padding:4em 2rem">
-        <div class="row mt-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-              </svg>
-        </div>
-        <div class="row d-flex justify-content-center align-items-center ">
+    <div class="container small " style="">
+
+        <div class="row d-flex justify-content-center align-items-center " ">
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
-                <h2 id="h2s" class="text-center "> {{$curso->nombre_curso}}</h2>
+                <h2 id="h2s" class="text-center"  style="margin-top: 120px"> {{$curso->nombre_curso}}</h2>
                   @if ($curso->imagen_curso)
-            <img class="card-img-top text-center" src="/storage/{{$curso->imagen_curso}}" alt="{{$curso->nombre_curso}}">
+            <img class="card-img-top text-center " src="/storage/{{$curso->imagen_curso}}" alt="{{$curso->nombre_curso}}">
         @endif
             </div>
-        <div class="col-sm-12 col-md-5 col-lg-6 col-xl-4 mt-lg-5">
-        <p class="text-secondary mt-5 text-center">Nombre docente: {{$curso->docente}}</p>
-        @switch($curso->dirigido_id)
-            @case(1)
-            <p class="text-secondary text-center ">Dirigido a: Magistrados</p>
-                @break
-            @case(2)
-            <p class="text-secondary text-center ">Dirigido a: Jueces</p>
-                @break
-             @case(3)
-            <p class="text-secondary text-center ">Dirigido a: Secretarios</p>
-                @break
-                 @case(4)
-            <p class="text-secondary text-center ">Dirigido a: Proyectistas</p>
-                @break
-                 @case(5)
-            <p class="text-secondary text-center ">Dirigido a: Notificadores y/o Actuarios</p>
-                @break
-                 @case(6)
-            <p class="text-secondary text-center ">Dirigido a: Administrativos</p>
-                @break
-            @default
-        @endswitch
+        <div  class="col-sm-12 col-md-5 col-lg-6 col-xl-6 ">
+            <h2  class="text-center" style="margin-top: 200px">Datos Generales</h2>
+            <div class="row ">
+                <div class="col-5"><p class="" >Nombre docente: {{$curso->docente}} </p></div>
+                <div class="col-3"> @switch($curso->dirigido_id)
+                    @case(1)
+                    <p class=" ">Dirigido a: Magistrados</p>
+                        @break
+                    @case(2)
+                    <p class="">Dirigido a: Jueces</p>
+                        @break
+                     @case(3)
+                    <p class="text-secondary ">Dirigido a: Secretarios</p>
+                        @break
+                         @case(4)
+                    <p class="text-secondary  ">Dirigido a: Proyectistas</p>
+                        @break
+                         @case(5)
+                    <p class="text-secondary  ">Dirigido a: Notificadores y/o Actuarios</p>
+                        @break
+                         @case(6)
+                    <p class="text-secondary  ">Dirigido a: Administrativos</p>
+                        @break
+                    @default
+                @endswitch</div>
+                <div class="w-1"></div>
 
-        <p class="text-secondary text-center">Horas del curso: {{$curso->horas_curso}}</p>
-        <p class="text-secondary text-center">Materia: {{$curso->materia}}</p>
-        <p class="text-secondary text-center " >Asistentes: {{$curso->vigencia}}</p><br>
+            </div>
+
+            <div class="row">
+                <div class="col">        <p class="text-secondary">Horas del curso: {{$curso->horas_curso}}</p>
+                </div>
+                <div class="col">        <p class="text-secondary text-center">Materia: {{$curso->materia}}</p>
+                </div>
+
+
+                <div class="col">        <p class="text-secondary text-center " >Asistentes: {{$curso->vigencia}}</p>
+                </div>
+              </div>
+
+
             <button id="inscr" class="btn btn-primary btn-sm btn-block colorbtnp " data-toggle="modal" data-target="#modelIds">inscribirse</button>
             @foreach ($users as $user)
             @while ( $user->email == auth()->user()->email)
                 <h6 id="enls" class="text-center" > <b>ENLACES</h6>
-                <p id="enls2" class="text-secondary text-center" >Link Conferencias: {{$curso->videoconferencia}}</p>
-                <p id="enls3" class="text-secondary text-center" style="margin-bottom: 40px " disabled>Carpeta Drive: {{$curso->drive}}</p>
+                <p id="enls2" class="text-secondary text-center" >Link Conferencias: <a href="{{$curso->videoconferencia}}" target="_blank">{{$curso->videoconferencia}}</a>  </p>
+
+                <p id="enls3" class="text-secondary text-center" style="margin-bottom: 40px " disabled> Carpeta Drive:<a href="{{$curso->drive}}" target="_blank"> {{$curso->drive}}</a> </p>
+
                 <button  class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds" disabled>Inscrito</button>
             <script>
                 var inscr = document.getElementById('inscr');
