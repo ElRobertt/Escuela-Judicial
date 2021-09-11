@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Crear proyecto')
+@section('title', 'Crear curso')
 
 @section('content')
     <div class="row mt-5" style="height: 100px">

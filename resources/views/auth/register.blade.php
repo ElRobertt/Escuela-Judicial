@@ -548,8 +548,7 @@
                         </div>
                     </div>
                 </section>
-                  </div>
-
+            </div>
         </div>
         <script>
             window.addEventListener("load", function() {

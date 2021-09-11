@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <link rel="shortcut icon" href="images/favicon32X.png">
+    <link rel="icon" type="image/png" href="images/favicon32X.png" />
     <title>@yield('title', 'Tribunal')</title>
 
 

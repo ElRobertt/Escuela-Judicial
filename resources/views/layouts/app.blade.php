@@ -18,7 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <script src="js-global/FancyZoom.js" type="text/javascript"></script>
+    <script src="js-global/FancyZoomHTML.js" type="text/javascript"></script>
     <!-- Styles -->
     <link href="{{ asset('css/apps.css') }}" rel="stylesheet">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">

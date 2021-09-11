@@ -18,11 +18,8 @@
                   @if ($curso->imagen_curso)
             <img class="card-img-top text-center" src="/storage/{{$curso->imagen_curso}}" alt="{{$curso->nombre_curso}}">
         @endif
-                </div>
-
-            <div class="col-sm-12 col-md-5 col-lg-6 col-xl-4 mt-lg-5">
-
-
+            </div>
+        <div class="col-sm-12 col-md-5 col-lg-6 col-xl-4 mt-lg-5">
         <p class="text-secondary mt-5 text-center">Nombre docente: {{$curso->docente}}</p>
         @switch($curso->dirigido_id)
             @case(1)
@@ -44,12 +41,11 @@
             <p class="text-secondary text-center ">Dirigido a: Administrativos</p>
                 @break
             @default
-
         @endswitch
+
         <p class="text-secondary text-center">Horas del curso: {{$curso->horas_curso}}</p>
         <p class="text-secondary text-center">Materia: {{$curso->materia}}</p>
-        <p class="text-secondary text-center " >Asistentes: {{$curso->vigencia}}</p>
-                    <br>
+        <p class="text-secondary text-center " >Asistentes: {{$curso->vigencia}}</p><br>
             <button id="inscr" class="btn btn-primary btn-sm btn-block colorbtnp " data-toggle="modal" data-target="#modelIds">inscribirse</button>
             @foreach ($users as $user)
             @while ( $user->email == auth()->user()->email)
@@ -57,36 +53,18 @@
                 <p id="enls2" class="text-secondary text-center" >Link Conferencias: {{$curso->videoconferencia}}</p>
                 <p id="enls3" class="text-secondary text-center" style="margin-bottom: 40px " disabled>Carpeta Drive: {{$curso->drive}}</p>
                 <button  class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds" disabled>Inscrito</button>
-
             <script>
                 var inscr = document.getElementById('inscr');
                 inscr.style.visibility = 'hidden';
                 inscr.style.display = "none";
             </script>
-
             @break
             @endwhile
-
             @endforeach
-
-
-
-
-
-
-
-
-
-
-
         </div>
     </div>
     </div>
-
-
           {{-- {{$users}} --}}
-
-
             @if (auth()->user()->hasRoles(1))
             <div class="container">
             <div class="row mt-5">
@@ -99,54 +77,41 @@
                             <tr>
                                 <th class="d-none d-lg-block">ID</th>
                                 <th>Nombre</th>
-
                                 <th>Email</th>
                                 <th class="text-center">Calificacion</th>
                                 <th class="text-center d-none d-lg-block">Completado</th>
                                 <th class="text-center">Acreditacion</th>
                             </tr>
-
                         </thead>
                         <tbody>
                             @foreach ($users as $user)
-
                             <tr>
                                 <td class="d-none d-lg-block">{{$user->id}}</td>
                                 <td><a href="{{ route('usuario.show', $user)}}">{{$user->name}}</a></td>
                                 <td>{{$user->email}}</td>
-
-
                                 <td class="text-center">9</td>
                                 <td class="d-none d-lg-block">
                                     <div class="text-center">
                                         @if ($user->pivot->completado==1)
                                             <a>Si</a>
-
                                         @else
                                             <a>No</a>
-
                                         @endif
-
                                     </div>
                                 </td>
                                 <td>
                                     @if ($user->pivot->completado == 1)
                                     <div class="text-center">
                                         <button class="btn btn-primary btn-sm colorbtnp2" disabled>Acreditado</button>
-
                                     </div>
                                     @else
-
                                     <form method="POST" action="{{ route('curso.actualizar', $user->pivot->id)}}">
                                         @csrf
                                         <div class="text-center">
                                             <input id="completado" type="hidden" name="completado" value="1" required autocomplete="name">
                                             <button class="btn btn-primary btn-sm colorbtnp mb-1" >Acreditar</button>
-
                                         </div>
                                     </form>
-
-
                                     @endif
                                 </td>
                             </tr>
