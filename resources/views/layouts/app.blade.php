@@ -21,7 +21,7 @@
     <script src="js-global/FancyZoom.js" type="text/javascript"></script>
     <script src="js-global/FancyZoomHTML.js" type="text/javascript"></script>
     <!-- Styles -->
-    <link href="{{ asset('css/apps.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     {{-- <style>
          header {

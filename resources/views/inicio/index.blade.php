@@ -53,7 +53,7 @@
                                         <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
                                         <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
                                         <div class="text-center">
-                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
+                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.General', $inicioItem)}}">Ver mas </a>
                                         </div>
                                     </div>
                                 </div>
@@ -86,7 +86,7 @@
                                         <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
                                         <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
                                         <div class="text-center">
-                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
+                                            <a class="btn btn-primary btn-lg colorbtnp" href="/general">Ver mas </a>
                                         </div>
                                     </div>
                                 </div>

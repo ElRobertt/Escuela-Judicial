@@ -375,7 +375,7 @@
                     </button>
                 <div class="modal-body text-center ">
                     <img data-target="#modelId" id="imgs1" onclick="funcs" class="img-thumbnail text-center offset-0 mt-3" src="/storage/{{auth()->user()->acta_nac}}" alt="" >
-
+                    <a style="color: #984b43" href="/storage/{{auth()->user()->acta_nac}}" download>Descargar </a>
                 </div>
             </div>
         </div>

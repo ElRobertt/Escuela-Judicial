@@ -179,11 +179,12 @@
                             {{-- {{$dirigidos}} --}}
 
                             <label for="cargo" class="col-12 col-form-label-sm text-md-left">Cargo que desempeña</label>
-                            <div class="col-md-12">
+                            <div class="col-md-12" style="border-color: 5px solid #4c0d0d">
                                 <select
                                 name="cargo"
                                 id="dirigido_id"
-                                class="form-control offset-lg-0 col-lg-12 mb-3"
+                                class="form-control offset-lg-0 col-lg-7 mb-3"
+
                                 >
 
                                 @foreach ($dirigidos as $id => $name)

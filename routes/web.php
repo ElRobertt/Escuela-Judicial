@@ -30,6 +30,7 @@ Route::view('/cursos.create', 'create')->name('create');
 Route::view('/usuario', 'usuario')->name('usuario');
 
 
+
 // Route::get('/cursos', 'CursoController@index')->name('curso.index');
 // route::get('cursos/crear', 'CursoController@create')->name('curso.create');
 // route::get('cursos/{curso}/editar', 'CursoController@edit')->name('curso.edit');
