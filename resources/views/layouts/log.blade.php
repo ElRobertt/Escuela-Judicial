@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="icon" type="image/png" href="../../../images/favicon32X.png" />
 
     <title>@yield('title', 'Tribunal')</title>
 
@@ -17,7 +18,7 @@
             text-decoration: none;
         }
         body {
-        background-image: url("../images/bg1.jpeg") !important;
+            background-image: url("../../../images/bg1s.jpg");
         height: 100%;
         width: 100%;
         position: relative

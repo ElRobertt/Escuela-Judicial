@@ -17,12 +17,13 @@
         <div class="col-12 col-sm-12 mt-3 col-md-6 col-lg-6 col-xl-6 offset-lg-0" style="max-width: 460px; background-color: white">
             <img class="rounded   col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " src="../../images/escuelajulogo.png" alt="" srcset="">
         </div>
-    </div>
-    <div class="row " style="background-color: white !important"">
-        <div class="ocul  col-12 col-sm-12 col-lg-2 col-xl-2 text-center ass " style="background-color: white ; " >
+        <div class="row " style="background-color: white !important"">
+            <div class="ocul  col-12 col-sm-12 col-lg-2 col-xl-2 text-center ass " style="background-color: white ; height:180px " >
 
+            </div>
         </div>
     </div>
+
 
 <div class="justify-content-left">
 <div class="container rounded">
@@ -630,6 +631,7 @@
             </div>
         </div>
     </div>
+
 </div>
 <script src="https://kit.fontawesome.com/b301d5de94.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

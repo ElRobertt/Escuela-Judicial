@@ -77,8 +77,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 offset-md-3 justify-content-center mt-0 text-center" style="border: solid 1px #aaa; border-radius: 10px; background-color:transparent">
-                                <a class="btn btn-lg text-center " style="color: #aaa" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <div class="col-md-8 offset-md-2 justify-content-center mt-0 text-center" style="">
+                                <a class="btn btn-lg text-center btn-block " style="color: #aaa;border: solid 1px #aaa; border-radius: 10px; background-color:transparent" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </div>
                         </div>
                         <div class="row">
