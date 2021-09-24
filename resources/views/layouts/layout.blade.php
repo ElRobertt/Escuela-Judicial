@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="icon" type="image/png" href="../../../images/favicon32X.png" />
-    <title>@yield('title', 'Escuela Judicial')</title>
+    <title>@yield('title', 'Tribunal')</title>
 
 
 
