@@ -43,34 +43,25 @@
                     @forelse ($inicio as $inicioItem)
                         @if ($inicioItem->dirigido_id==1)
                             <div class="col-12 col-sm-12 col-lg-3 col-xs-3  ">
-                                <div class="card mb-5" style="width: 270px; min-height:400px !important; max-height:450px !important; object-fit:cover">
+                                <div class="card mb-5" style=" ">
                                     @if ($inicioItem->imagen_curso)
 
                                         <img class="card-img-top" src="/storage/{{$inicioItem->imagen_curso}}" alt="{{$inicioItem->nombre_curso}}">
                                     @endif
                                     <div class="card-body">
-                                        <h5 class="card-title text-center bls">Nombre Curso:<br>{{$inicioItem->nombre_curso}}</h5>
-                                        <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
+                                        <h5 class="card-title text-center bls">Nombre Cursos:<br>{{$inicioItem->nombre_curso}}</h5>
+                                        <p class="card-text text-center" style="font-weight: 200;">Docente: {{$inicioItem->docente}}</p>
                                         <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
                                         <div class="text-center">
-                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.General', $inicioItem)}}">Ver mas </a>
+                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         @endif
                         @empty
-                        @if (Auth()->user()->role_id == 1)
-                        <div class="col-12">
-                            <p class="text-center">Por el momento no tenemos ningun curso para mostrars <a href="{{ route('curso.create')}}">ingresa uno nuevo. </a>  </p>
-                        </div>
-
-
-                        @else
-                        <div class="col-12">
-                            <p>Por el momento no tenemos ningun curso para mostrar </p>
-                        </div>
-                        @endif                    @endforelse
+                        No hay Cursos Disponibles
+                    @endforelse
                     @break
                 @case(2)
                     @forelse ($inicio as $inicioItem)
@@ -86,24 +77,15 @@
                                         <p class="card-text text-center" style="font-weight: 500;">Docente: {{$inicioItem->docente}}</p>
                                         <p class="card-text text-center">Fecha: {{$inicioItem->fecha}}</p>
                                         <div class="text-center">
-                                            <a class="btn btn-primary btn-lg colorbtnp" href="/general">Ver mas </a>
+                                            <a class="btn btn-primary btn-lg colorbtnp" href="{{route('curso.show', $inicioItem)}}">Ver mas </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         @endif
                     @empty
-                    @if (Auth()->user()->role_id == 1)
-                    <div class="col-12">
-                        <p class="text-center">Por el momento no tenemos ningun curso para mostrar <a href="">ingresa uno nuevo. </a>  </p>
-                    </div>
-
-
-                    @else
-                    <div class="col-12">
-                        <p>Por el momento no tenemos ningun curso para mostrar </p>
-                    </div>
-                    @endif                    @endforelse
+                    No hay Cursos Disponibles
+                    @endforelse
                         @break
                 @case(3)
                     @forelse ($inicio as $inicioItem)
@@ -126,17 +108,8 @@
                             </div>
                         @endif
                     @empty
-                    @if (Auth()->user()->role_id == 1)
-                    <div class="col-12">
-                        <p class="text-center">Por el momento no tenemos ningun curso para mostrar <a href="">ingresa uno nuevo. </a>  </p>
-                    </div>
-
-
-                    @else
-                    <div class="col-12">
-                        <p>Por el momento no tenemos ningun curso para mostrar </p>
-                    </div>
-                    @endif                    @endforelse
+                    No hay Cursos Disponibles
+                    @endforelse
                         @break
                 @case(4)
                     @forelse ($inicio as $inicioItem)
@@ -159,17 +132,8 @@
                             </div>
                         @endif
                     @empty
-                    @if (Auth()->user()->role_id == 1)
-                    <div class="col-12">
-                        <p class="text-center">Por el momento no tenemos ningun curso para mostrar <a href="">ingresa uno nuevo. </a>  </p>
-                    </div>
-
-
-                    @else
-                    <div class="col-12">
-                        <p>Por el momento no tenemos ningun curso para mostrar </p>
-                    </div>
-                    @endif                    @endforelse
+                    No hay Cursos Disponibles
+                    @endforelse
                         @break
                 @case(5)
                     @forelse ($inicio as $inicioItem)
@@ -192,17 +156,8 @@
                             </div>
                         @endif
                     @empty
-                    @if (Auth()->user()->role_id == 1)
-                    <div class="col-12">
-                        <p class="text-center">Por el momento no tenemos ningun curso para mostrar <a href="">ingresa uno nuevo. </a>  </p>
-                    </div>
-
-
-                    @else
-                    <div class="col-12">
-                        <p>Por el momento no tenemos ningun curso para mostrar </p>
-                    </div>
-                    @endif                    @endforelse
+                    No hay Cursos Disponibles
+                    @endforelse
                         @break
                 @case(6)
                     @forelse ($inicio as $inicioItem)
@@ -225,17 +180,8 @@
                             </div>
                         @endif
                     @empty
-                    @if (Auth()->user()->role_id == 1)
-                    <div class="col-12">
-                        <p class="text-center">Por el momento no tenemos ningun curso para mostrar <a href="">ingresa uno nuevo. </a>  </p>
-                    </div>
-
-
-                    @else
-                    <div class="col-12">
-                        <p>Por el momento no tenemos ningun curso para mostrar </p>
-                    </div>
-                    @endif                    @endforelse
+                    No hay Cursos Disponibles
+                    @endforelse
                         @break
                 @case(7)
                     @forelse ($inicio as $inicioItem)
@@ -258,33 +204,12 @@
                             </div>
                         @endif
                     @empty
-                    @if (Auth()->user()->role_id == 1)
-                            <div class="col-12">
-                                <p class="text-center">Por el momento no tenemos ningun curso para mostrar <a href="">ingresa uno nuevo. </a>  </p>
-                            </div>
-
-
-                            @else
-                            <div class="col-12">
-                                <p>Por el momento no tenemos ningun curso para mostrar </p>
-                            </div>
-                            @endif
+                    No hay Cursos Disponibles
                     @endforelse
                         @break
 
                 @default
-                            @if (Auth()->user()->role_id == 1)
-                            <div class="col-12">
-                                <p class="text-center">Por el momento no tenemos ningun curso para mostrar <a href="">ingresa uno nuevo. </a>  </p>
-                            </div>
-
-
-                            @else
-                            <div class="col-12">
-                                <p>Por el momento no tenemos ningun curso para mostrar </p>
-                            </div>
-                            @endif
-
+                    Default case...
                 @endswitch
 
             </div>
