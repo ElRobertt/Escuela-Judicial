@@ -10,20 +10,6 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
     <title>@yield('title', 'Tribunal')</title>
-
-    <style>
-        .active a{
-            color: red;
-            text-decoration: none;
-        }
-        body {
-        background-image: url("../images/bg1.jpeg") !important;
-        height: 100%;
-        width: 100%;
-        position: relative
-
-    </style>
-
 </head>
 <header>
 

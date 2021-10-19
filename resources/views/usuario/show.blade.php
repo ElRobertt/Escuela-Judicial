@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <div class="container small " style="padding:4em 2rem; ">
+    <div class="container small " style="padding:4em 2rem; border:3px solid white">
         <div class="row " style="margin-top: 100px">
             <div class="col-12 col-sm-12 col-lg-4 col-xl-4  " style="">
                 <h2 class="mt-1"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="50" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">

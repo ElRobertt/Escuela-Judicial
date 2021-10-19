@@ -4,50 +4,126 @@
 
 
 @section('content')
+    <div class="container" style="background-color: #4c0d0d; margin-top:200px !important">
+        <div class="row">
+            <div class="col-12">
+                <ul>
+                    <li>Hello</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-    <div class="container " style="padding:4em 2rem; margin-top:150px !important">
-        <div class="row " style="margin-top: 100px">
+    <div class="container mt-5" style="border: 3px solid #4c0d0d; border-radius:10px" >
+        <div class="row " style="margin-top: 0px">
             <div class="col-12 col-sm-12 col-lg-4 col-xl-4  " style="">
-                <h2 class="mt-1"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="50" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                  </svg>Datos Generaless</h2>
+                <h2 class="mt-1" style="color: #4c0d0d">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/> <br>
+                  </svg>Datos Generales</h2>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-lg-4 col-xl-4 ">
                 <img class="img-fluid rounded-circle text-center offset-0" src="/storage/{{auth()->user()->imagen_perfil}}" alt="Card image cap" style="max-height: 300px">
             </div>
-                <div class="col-sm-12 col-md-5 col-lg-6 col-xl-4 mt-lg-5">
-                    <div class="text-left">
-                        <h3 class="text-center"> <b> {{auth()->user()->name}}</b> </h3>
-                        <h5 class="text-center"> Juez</h5>
-                        <p class="text-secondary ml-0 text-center ">Email: <br> <b>{{auth()->user()->email}}</b> </p>
-                        <p class="text-center" style="margin-top: 0px !important">Fecha Nacimiento: <br> <b>12/3/1993</b> </p>
-                        <p style="margin-top: 0px !important"  class="text-center">Grado Estudios: <br> <b> Lic. derecho</b> </p>
-                            <p class="text-center">Fecha Inscripcion: <b>28/6/2021</b> </p>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-6 col-xl-5 ">
+                <table>
+                    <thead>
+                        <tr>
+                            <h3 class="text-center" style="color: #4c0d0d">
+                                <b> {{auth()->user()->name}} <br>
+                                </b>
+                            </h3>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <p class="text-center text-secondary">
+                            <b>
+                                @switch(auth()->user()->cargo)
+                                    @case(1)
+                                        Magistrado
+                                        @break
+                                    @case(2)
+                                        Juez
+                                        @break
+                                    @case(3)
+                                        Secretario
+                                        @break
+                                    @case(4)
+                                        Proyectista
+                                        @break
+                                    @case(5)
+                                        Notificador / Actuario
+                                        @break
+                                    @case(6)
+                                        Administrativo
+                                        @break
+                                    @case(7)
+                                        Personal Externo
+                                        @break
+
+                                    @default
+
+                                @endswitch
+
+                            </b>
+                        </p>
+                    </tr>
+                    <td>
+                        <h6 class="text-secondary ml-0 text-left ">Email: <br>
+                            <b>{{auth()->user()->email}}</b>
+                        </h6>
+                    </td>
+                    <td>
+                        <h6 class=" text-secondary ml-5 text-right" style="margin-top: 0px !important">Edad: <br> <b> {{auth()->user()->edad}} años</b>
+                        </h6>
+                    </td>
+
+                    <tr>
+                        <td>
+                            <h6 class="text-secondary text-left">Numero Telefonico: <br> <b>  {{auth()->user()->numero}}</b> </h6>
+                        </td>
+                        <td>
+                            <p class="text-right text-secondary">Institucion de Procedencia: <br> <b> {{auth()->user()->institucion}}</b> </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             @if (auth()->user()->role_id==1)
-                            <p style="margin-top: 0px !important" class="text-secondary text-center">Rol: <b>Administrador</b> </p>
+                            <h6 style="margin-top: 0px !important" class="text-secondary text-left">Tipo de cuenta: <b>Administrador</b> </h6>
                             @else
-                            <p class="text-secondary text-center">Rol: <b>Alumno</b> </p>
+                            <h6 class="text-secondary text-left">Tipo de cuenta: <b>Alumno</b> </h6>
                             @endif
-                            @if (auth()->user()->hasRoles(1))
-                            <div class="text-center">
-                                {{-- <a class="btn btn-primary btn-sm btn-block  colorbtnpss mb-0" href="{{route('usuario.edit', $usuario)}}">Editar </a> --}}
-                            </div>
-                        <div class="col-sm-12 mb-3 col-md-4 mb-md-0 mt-0">
-                    @endif
-                        </div>
-                    </div>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            @if (auth()->user()->hasRoles(1))
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-5 col-lg-6 col-xl-6 ">
+               <div class="text-center">
+                    <a class="btn btn-primary btn-sm btn-block  colorbtnpss mb-0">Editar </a>
+               </div>
                 </div>
-                <div class="col-sm-12 col-md-5 col-lg-4 col-xl-1 mt-lg-5">
-                    @if (auth()->user()->hasRoles(1))
+                <div class="col-12 col-sm-12 col-md-5 col-lg-6 col-xl-6">
                     <div class="text-center">
-                        <button class="btn btn-danger btn-sm btn-block delete-btn colorbtnpss " data-toggle="modal" data-target="#modelId">Eliminar</button>
+                        <button class="btn btn-danger btn-sm btn-block delete-btn colorbtnpss " data-toggle="modal" data-target="#modelId">Eliminar cuenta</button>
                     </div>
-                @endif
+
                 </div>
             </div>
-
-            <div class="col-12">
-                <h5 class="text-left p-2 " style="border-bottom:3px solid #4c0d0d"><b> Documentacion Anexada</h5>
+            @endif
+         </div>
             </div>
 
+            <div class="container">
+            <div class="col-12">
+                <h2 class="text-left p-2 " style="border-bottom:3px solid #4c0d0d; color:#4c0d0d"> Documentacion Anexada</h2>
+            </div>
               <div class="col-10 mt-2">
                 <section class="row text-center">
                 <ul class="nav nav-tabs text-center">
@@ -91,6 +167,7 @@
                     </div>
                 </div>
             </div>
+        </div>
                     <div id="tabs-22" class="tab-content">
                     <div id="tab-2" class="tab-pane ">
                         <span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
@@ -334,13 +411,12 @@
     }
 });
     </script>
-
+        <div class="container">
         <div class="row">
-
-
-
-            <div class="col-6 mt-3">
-                <h4>Lista de cursos</h4>
+            <h2 style="color: #4c0d0d">Lista de cursos</h2>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-6 ">
                 <h3 class="text-left" style="border-bottom:3px solid #4c0d0d">Pendientes</h3>
                 @forelse ($cursos as $cursoItem)
                 @if ($cursoItem->pivot->completado==0)
@@ -350,8 +426,8 @@
                 <li>No hay cursos para mostrar</li>
                 @endforelse
             </div>
-            <div class="col-6 mt-5">
-                <h3 class="text-center" style="border-bottom:3px solid #4c0d0d">Acreditados</h3>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-6">
+                <h3 class="text-left" style="border-bottom:3px solid #4c0d0d">Acreditados</h3>
                 @forelse ($cursos as $cursoItem)
                 @if ($cursoItem->pivot->completado==1)
                     <li class="list-group-item list-group-item-action list-group-item-success text-center mb-2"><a style="color: #aaa !important"  href="{{ route ('curso.show', $cursoItem)}}">{{ $cursoItem->nombre_curso}}</a> </li>

@@ -208,6 +208,10 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+
+    .ulli{
+        margin-left:none!important;
+    }
     .logos{
         height: 110px;
     width: 150px;
