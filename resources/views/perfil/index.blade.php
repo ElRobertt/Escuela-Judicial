@@ -4,18 +4,19 @@
 
 
 @section('content')
-    <div class="container" style="background-color: #4c0d0d; margin-top:200px !important">
-        <div class="row">
+    <div class="container margins" style="background-color: #4c0d0d; margin-top:150px ; visibility: hidden;
+    ">
+        <div class="row" style="">
             <div class="col-12">
                 <ul>
-                    <li>Hello</li>
+                    <li>hola</li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div class="container mt-5" style="border: 3px solid #4c0d0d; border-radius:10px" >
-        <div class="row " style="margin-top: 0px">
+        <div class="row " >
             <div class="col-12 col-sm-12 col-lg-4 col-xl-4  " style="">
                 <h2 class="mt-1" style="color: #4c0d0d">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
@@ -120,266 +121,164 @@
          </div>
             </div>
 
-            <div class="container">
-            <div class="col-12">
-                <h2 class="text-left p-2 " style="border-bottom:3px solid #4c0d0d; color:#4c0d0d"> Documentacion Anexada</h2>
-            </div>
-              <div class="col-10 mt-2">
-                <section class="row text-center">
-                <ul class="nav nav-tabs text-center">
-                    <li class="active ml-3 text-center"><a id="CP1" href="#tab-1">
-                        <svg id="check1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
-                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                          </svg>
-                        COPIA CERTIFICADA ACTA NACIMIENTO |</a></li>
+            <div class="container mt-1" >
+                <div class="row "style="border-bottom: #4c0d0d solid 3px" >
+                    <div class="col-6" >
+                        <h3 class="mt-5" style="color: #4c0d0d">Documentación Anexada</h3>
 
-                    <li class="ml-3"><a id="CP2" href="#tab-2"><svg id="check2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
-                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>COPIA CERTIFICADA CEDULA/TITULO |</a></li>
-
-                     <li class="ml-3"><a id="CP3" href="#tab-3"><svg id="check3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
-                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>COPIA CREDENCIAL DEL ELECTOR |</a></li>
-
-                    <li class="ml-3"><a id="CP4" href="#tab-4">
-                        <svg id="check4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
-                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                          </svg>CARTA EXPOSICION MOTIVOS |</a></li>
-                    <li class="ml-3"><a id="CP5"href="#tab-5"><svg id="check5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
-                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>FOTOGRAFIAS TAMAÑO CREDENCIAL BLANCO Y NEGRO |</a></li>
-                    <li class="ml-3"><a id="CP6" href="#tab-6"><svg id="check6" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" style="visibility: hidden"  viewBox="0 0 16 16">
-                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                      </svg>COPIA SIMPLE CURP |</a></li>
-
-                </ul>
-
-                <div class="tab-content offset-4">
-                    <div id="tab-1" class="tab-pane active text-center">
-                            <div class="form-group row">
-                                <div class="col-8 ">
-
-                                     <img data-target="#modelId" id="imgs1" onclick="funcs" class="img-thumbnail text-center offset-0 mt-3" src="/storage/{{auth()->user()->acta_nac}}" alt="" style="max-height: 430px">
-                                     <a data-toggle="modal"  data-target="#modelIdsss" href=""> Expandir</a>
-
-                                </div>
-                            </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <section class="row align-items-center">
+                  <div class="col-12 col-lg-6">
+                    <ul class="ulli nav nav-tabs text-left" >
+                        <li class="active ml-sm-0 ml-lg-3  text-left">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""  id="check1" disabled checked>
+                                <a id="CP1" href="#tab-1" class="form-check-label" for="defaultCheck1">
+                                    COPIA CERTIFICADA ACTA NACIMIENTO
+                                </a>
+                            </div>
+                        </li>
+                        <li class=" ml-sm-0 ml-lg-3 text-left">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""  id="check4" disabled checked>
+                                <a id="CP4" href="#tab-4" class="form-check-label" for="defaultCheck1">
+                                    CARTA EXPOSICION MOTIVOS
+                                </a>
+                            </div>
+                        </li>
+                        <li class=" ml-sm-0 ml-lg-3 text-left">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""  id="check2" disabled checked>
+                                <a id="CP2" href="#tab-2" class="form-check-label" for="defaultCheck1">
+                                    COPIA CERTIFICADA CEDULA/TITULO
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class=" ml-sm-0 ml-lg-3 text-left">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""  id="check3" disabled checked>
+                                <a id="CP3" href="#tab-3" class="form-check-label" for="defaultCheck1">
+                                    COPIA CREDENCIAL DEL ELECTOR
+                                </a>
+                            </div>
+                        </li>
+                        <li class="ml-sm-0 ml-lg-3 text-left">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""  id="check5" disabled checked>
+                                <a id="CP5" href="#tab-5" class="form-check-label" for="defaultCheck1">
+                                    FOTOGRAFIAS TAMAÑO CREDENCIAL BLANCO Y NEGRO
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class=" ml-sm-0 ml-lg-3 text-left">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""  id="check6" disabled checked>
+                                <a id="CP6" href="#tab-6" class="form-check-label" for="defaultCheck1">
+                                    COPIA SIMPLE CURP                                 </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-6 tab-content mt-5" style="background-color: white; border-radius:4px ">
+                    <div id="tab-12" class="tab-pane"></div>
+
+
+                    <div class="tab-content ">
+                        <div id="tab-1" class="tab-pane active text-center">
+                            <span class="col-md-10">
+                                <div class="form-group row">
+                                    <div class="col-12 col-sm-12 col-lg-11">
+                                        <h6> <b> COPIA CERTIFICADA ACTA NACIMIENTO</h6>
+                                            <embed src="/storage/{{auth()->user()->acta_nac}}#toolbar=1&navpanes=1&scrollbar=0&zoom=0" type="application/pdf" width="100%" height="450px" />
+
+                                        {{-- <img src="/storage/{{auth()->user()->acta_nac}}" class="img-fluid img-thumbnail mt-1 text-center" style="height: 450px;width: 350px" id="imagenPrevisualizacion2223"> --}}
+
+
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
                     <div id="tabs-22" class="tab-content">
-                    <div id="tab-2" class="tab-pane ">
-                        <span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
-                        <span class="col-md-10">
-                            <div class="form-group row" id="1">
-                                <div class="col-8">
-                                    <img data-target="#modelId" id="imgs1" onclick="funcs" class="img-thumbnail text-center offset-0 mt-3" src="/storage/{{auth()->user()->cedula}}" alt="" style="max-height: 430px">
-                                     <a data-toggle="modal"  data-target="#modelIdsss2" href=""> Expandir</a>
-                                    <script>
-                                        // Obtener referencia al input y a la imagen
-                                const $seleccionArchivos2 = document.querySelector("#formFiless"),
-                                $imagenPrevisualizacion2 = document.querySelector("#imagenPrevisualizacion2");
-
-                                // Escuchar cuando cambie
-                                $seleccionArchivos2.addEventListener("change", () => {
-                                // Los archivos seleccionados, pueden ser muchos o uno
-                                const archivos = $seleccionArchivos2.files;
-                                // Si no hay archivos salimos de la función y quitamos la imagen
-                                if (!archivos || !archivos.length) {
-                                    $imagenPrevisualizacion2.src = "";
-                                    return;
-                                }
-                                // Ahora tomamos el primer archivo, el cual vamos a previsualizar
-                                const primerArchivo = archivos[0];
-                                // Lo convertimos a un objeto de tipo objectURL
-                                const objectURL = URL.createObjectURL(primerArchivo);
-                                // Y a la fuente de la imagen le ponemos el objectURL
-                                $imagenPrevisualizacion2.src = objectURL;
-                                var intro = document.getElementById('CP2');
-                                    intro.style.cssText = 'color: green;';
-                                    var check = document.getElementById('check2');
-                                    check.style.visibility = "visible";
-                                });
-
-                                    </script>
+                        <div id="tab-2" class="tab-pane text-center">
+                            <span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
+                            <span class=" col-md-10">
+                                <div class="form-group row" id="1">
+                                    <div class="col-12 col-sm-12 col-lg-11">
+                                        <h6  class="text-center"> <b> COPIA CERTIFICADA CEDULA/TITULO <br> </h6>
+                                            <embed src="/storage/{{auth()->user()->cedula}}#toolbar=1&navpanes=1&scrollbar=0&zoom=0" type="application/pdf" width="100%" height="450px" />
+                                    </div>
                                 </div>
-                            </div>
-                        </span>
+                            </span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="tab-content">
-                    <div id="tab-3" class="tab-pane">
-                        <span class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"></span>
-                        <span class="col-md-10">
-                            <div class="form-group row " id="2">
-                                <div class="col-8">
-                                    <img data-target="#modelId" id="imgs1" onclick="funcs" class="img-thumbnail text-center offset-0 mt-3" src="/storage/{{auth()->user()->credencial}}" alt="" style="max-height: 430px">
-                                     <a data-toggle="modal"  data-target="#modelIdsss3" href=""> Expandir</a>
-
-
-
-                                    <script>
-                                        // Obtener referencia al input y a la imagen
-                                const $seleccionArchivos3 = document.querySelector("#formFiles3"),
-                                $imagenPrevisualizacion3 = document.querySelector("#imagenPrevisualizacion3");
-
-                                // Escuchar cuando cambie
-                                $seleccionArchivos3.addEventListener("change", () => {
-                                // Los archivos seleccionados, pueden ser muchos o uno
-                                const archivos = $seleccionArchivos3.files;
-                                // Si no hay archivos salimos de la función y quitamos la imagen
-                                if (!archivos || !archivos.length) {
-                                    $imagenPrevisualizacion3.src = "";
-                                    return;
-                                }
-                                // Ahora tomamos el primer archivo, el cual vamos a previsualizar
-                                const primerArchivo = archivos[0];
-                                // Lo convertimos a un objeto de tipo objectURL
-                                const objectURL = URL.createObjectURL(primerArchivo);
-                                // Y a la fuente de la imagen le ponemos el objectURL
-                                $imagenPrevisualizacion3.src = objectURL;
-                                var intro = document.getElementById('CP3');
-                                    intro.style.cssText = 'color: green;';
-                                    var check = document.getElementById('check3');
-                                    check.style.visibility = "visible";
-                                });
-
-                                    </script>
+                    <div class="tab-content">
+                        <div id="tab-3" class="tab-pane text-center">
+                            <span class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"></span>
+                            <span class="col-md-10">
+                                <div class="form-group row " id="2">
+                                    <div class="col-12 col-md-11">
+                                        <h6  class="text-center"> <b> COPIA CREDENCIAL DEL ELECTOR <br></h6>
+                                            <embed src="/storage/{{auth()->user()->credencial}}#toolbar=1&navpanes=1&scrollbar=0&zoom=0" type="application/pdf" width="100%" height="450px" />
+                                    </div>
                                 </div>
-                            </div>
-                        </span>
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="tab-content">
-                    <div id="tab-4" class="tab-pane">
-                        <span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
-                        <span class="col-md-10">
-                            <div class="form-group row">
-                                <div class="col-8">
-                                    <img data-target="#modelId" id="imgs1" onclick="funcs" class="img-thumbnail text-center offset-0 mt-3" src="/storage/{{auth()->user()->carta_expo}}" alt="" style="max-height: 430px">
-                                     <a data-toggle="modal"  data-target="#modelIdsss4" href=""> Expandir</a>
 
-                                    <script>
-                                        // Obtener referencia al input y a la imagen
-                                const $seleccionArchivos4 = document.querySelector("#formFiles4"),
-                                $imagenPrevisualizacion4 = document.querySelector("#imagenPrevisualizacion4");
+                    <div class="tab-content">
+                        <div id="tab-4" class="tab-pane text-center">
+                            <span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
+                            <span class="col-md-10">
+                                <div class="form-group row">
+                                    <div class="col-12 col-md-11">
+                                        <h6  class="text-center"> <b> CARTA EXPOSICION MOTIVOS <br> </h6>
 
-                                // Escuchar cuando cambie
-                                $seleccionArchivos4.addEventListener("change", () => {
-                                // Los archivos seleccionados, pueden ser muchos o uno
-                                const archivos = $seleccionArchivos4.files;
-                                // Si no hay archivos salimos de la función y quitamos la imagen
-                                if (!archivos || !archivos.length) {
-                                    $imagenPrevisualizacion4.src = "";
-                                    return;
-                                }
-                                // Ahora tomamos el primer archivo, el cual vamos a previsualizar
-                                const primerArchivo = archivos[0];
-                                // Lo convertimos a un objeto de tipo objectURL
-                                const objectURL = URL.createObjectURL(primerArchivo);
-                                // Y a la fuente de la imagen le ponemos el objectURL
-                                $imagenPrevisualizacion4.src = objectURL;
-                                var intro = document.getElementById('CP4');
-                                    intro.style.cssText = 'color: green;';
-                                    var check = document.getElementById('check4');
-                                    check.style.visibility = "visible";
-                                });
-
-                                    </script>
+                                            <embed src="/storage/{{auth()->user()->carta_expo}}#toolbar=1&navpanes=1&scrollbar=0&zoom=0" type="application/pdf" width="100%" height="450px" />
+                                    </div>
                                 </div>
-                            </div>
-                        </span>
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="tab-content">
-                    <div id="tab-5" class="tab-pane ">
-                        <span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
-                        <span class="col-md-10">
-                            <div class="form-group row">
-                                <div class="col-8">
 
-                                    <img data-target="#modelId" id="imgs1" onclick="funcs" class="img-thumbnail text-center offset-0 mt-3" src="/storage/{{auth()->user()->fotografia}}" alt="" style="max-height: 430px">
-                                    <a data-toggle="modal"  data-target="#modelIdsss5" href=""> Expandir</a>
-
-                                    <script>
-                                        // Obtener referencia al input y a la imagen
-                                const $seleccionArchivos5 = document.querySelector("#formFiles5"),
-                                $imagenPrevisualizacion5 = document.querySelector("#imagenPrevisualizacion5");
-
-                                // Escuchar cuando cambie
-                                $seleccionArchivos5.addEventListener("change", () => {
-                                // Los archivos seleccionados, pueden ser muchos o uno
-                                const archivos = $seleccionArchivos5.files;
-                                // Si no hay archivos salimos de la función y quitamos la imagen
-                                if (!archivos || !archivos.length) {
-                                    $imagenPrevisualizacion5.src = "";
-                                    return;
-                                }
-                                // Ahora tomamos el primer archivo, el cual vamos a previsualizar
-                                const primerArchivo = archivos[0];
-                                // Lo convertimos a un objeto de tipo objectURL
-                                const objectURL = URL.createObjectURL(primerArchivo);
-                                // Y a la fuente de la imagen le ponemos el objectURL
-                                $imagenPrevisualizacion5.src = objectURL;
-                                var intro = document.getElementById('CP5');
-                                    intro.style.cssText = 'color: green;';
-                                    var check = document.getElementById('check5');
-                                    check.style.visibility = "visible";
-                                });
-
-                                    </script>
+                    <div class="tab-content" style="border-bottom: #4c0d0d solid 3px">
+                        <div id="tab-5" class="tab-pane text-center">
+                            <span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
+                            <span class="col-md-10">
+                                <div class="form-group row">
+                                    <div class="col-12 col-md-11">
+                                        <h6  class="text-center"> <b> FOTOGRAFIA TAMAÑO CREDENCIAL EN BLANCO Y NEGRO <br>
+                                            <embed src="/storage/{{auth()->user()->fotografia}}#toolbar=1&navpanes=1&scrollbar=0&zoom=0" type="application/pdf" width="100%" height="450px" />
+                                    </div>
                                 </div>
-                            </div>
-                        </span>
+                            </span>
+                        </div>
                     </div>
-                </div>
-
-
-
-
-                <div class="tab-content">
-                    <div id="tab-6" class="tab-pane">
-                        <span class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"></span>
-                        <span class="col-md-10">
-                            <div class="form-group row">
-                                <div class="col-8">
-                                    <img data-target="#modelId" id="imgs1" onclick="funcs" class="img-thumbnail text-center offset-0 mt-3" src="/storage/{{auth()->user()->curp}}" alt="" style="max-height: 430px">
-                                    <a data-toggle="modal"  data-target="#modelIdsss6" href=""> Expandir</a>
-                                    <script>
-                                        // Obtener referencia al input y a la imagen
-                                const $seleccionArchivos6 = document.querySelector("#formFiles6"),
-                                $imagenPrevisualizacion6 = document.querySelector("#imagenPrevisualizacion6");
-
-                                // Escuchar cuando cambie
-                                $seleccionArchivos6.addEventListener("change", () => {
-                                // Los archivos seleccionados, pueden ser muchos o uno
-                                const archivos = $seleccionArchivos6.files;
-                                // Si no hay archivos salimos de la función y quitamos la imagen
-                                if (!archivos || !archivos.length) {
-                                    $imagenPrevisualizacion6.src = "";
-                                    return;
-                                }
-                                // Ahora tomamos el primer archivo, el cual vamos a previsualizar
-                                const primerArchivo = archivos[0];
-                                // Lo convertimos a un objeto de tipo objectURL
-                                const objectURL = URL.createObjectURL(primerArchivo);
-                                // Y a la fuente de la imagen le ponemos el objectURL
-                                $imagenPrevisualizacion6.src = objectURL;
-                                var intro = document.getElementById('CP6');
-                                    intro.style.cssText = 'color: green;';
-                                    var check = document.getElementById('check6');
-                                    check.style.visibility = "visible";
-                                });
-
-                                    </script>
+                    <div class="tab-content">
+                        <div id="tab-6" class="tab-pane text-center">
+                            <span class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"></span>
+                            <span class="col-md-10">
+                                <div class="form-group row">
+                                    <div class="col-12 col-md-11">
+                                        <h6  class="text-center"> <b> COPIA SIMPLE CURP <br>
+                                            <embed src="/storage/{{auth()->user()->curp}}#toolbar=1&navpanes=1&scrollbar=0&zoom=0" type="application/pdf" width="100%" height="450px" />
+                                    </div>
                                 </div>
-                            </div>
-                        </span>
+                            </span>
+                        </div>
                     </div>
-                </div>
+
             </section>
+        </div>
+
+
+
 
 
     <script>
@@ -413,7 +312,7 @@
     </script>
         <div class="container">
         <div class="row">
-            <h2 style="color: #4c0d0d">Lista de cursos</h2>
+            <h2 class="mt-3" style="color: #4c0d0d">Lista de cursos</h2>
         </div>
         <div class="row">
             <div class="col-12 col-sm-12 col-md-8 col-lg-6 ">

@@ -206,6 +206,42 @@ body {
 .small{
     margin-top:150px !important
 }
+@media only screen and (max-width:600px) {
+    .mx{
+visibility: hidden;
+display: none;
+}
+
+
+
+}
+
+
+@media only screen and (min-width:600px) {
+    .ssh{
+visibility: hidden;
+display: none;
+}
+.mx2{
+    visibility: hidden;
+    display: none;
+    }
+
+
+
+
+}
+@media only screen and (max-width:990px) {
+    .logos2{
+        visibility: hidden;
+        display: none;
+    }
+    .margins{
+        margin-top: 260px !important;
+    }
+  }
+
+
 
 @media only screen and (max-width: 500px) {
 
@@ -215,7 +251,7 @@ body {
     .logos{
         height: 110px;
     width: 150px;
-    margin-right: 270px !important;
+
 
     }
     .margs{

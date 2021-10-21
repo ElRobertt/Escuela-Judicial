@@ -5,15 +5,16 @@
 
 
 @section('content')
-<div class="container" style="background-color: none; margin-top:250px !important">
-    <div class="row">
-        <div class="col-12">
-            <ul>
-                <li style="color: transparent">Hello</li>
-            </ul>
+<div  class="container margins" style="background-color: #4c0d0d; margin-top:150px ; visibility: hidden;
+    ">
+        <div class="row" style="">
+            <div class="col-12">
+                <ul>
+                    <li>hola</li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
 
     <div class="container mt-1 " style="border:3px solid #4c0d0d">
@@ -102,8 +103,8 @@
             @foreach ($users as $user)
             @while ( $user->email == auth()->user()->email)
                 <h6 id="enls" class="text-center" > <b>ENLACES</h6>
-                <p id="enls2" class="text-secondary text-left" >Link Conferencias: <a href="{{$curso->videoconferencia}}">{{$curso->videoconferencia}}</a></p>
-                <p id="enls3" class="text-secondary text-left" style="margin-bottom: 40px " disabled>Carpeta Drive: <a href="{{$curso->drive}}">{{$curso->drive}}</a>  </p>
+                <p id="enls2" class="text-secondary text-left" >Link Conferencias: <br> <a href="{{$curso->videoconferencia}}">{{$curso->videoconferencia}}</a></p>
+                <p id="enls3" class="text-secondary text-left" style="margin-bottom: 40px " disabled>Carpeta Drive: <br> <a href="{{$curso->drive}}">{{$curso->drive}}</a>  </p>
 
                 <button  class="btn btn-primary btn-sm btn-block colorbtnp mb-1" data-toggle="modal" data-target="#modelIds" disabled>Inscrito</button>
             <script>

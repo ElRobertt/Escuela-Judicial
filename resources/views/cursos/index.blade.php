@@ -4,10 +4,10 @@
 
 @section('content')
 
-    <div class="container " style="padding:1em 2rem; margin-top:280px !important">
+    <div class="container margins" style="padding:1em 2rem; margin-top:180px">
             <div class="row">
                     <div class="col-12">
-                        <h1 class="text-left txtprimary " style="font-size: 20px">Lista de cursos</h1>
+                        <h1 class="text-left txtprimary mt-5" >Lista de cursos</h1>
                     </div>
             </div>
                         <div class="row mt-1 " >

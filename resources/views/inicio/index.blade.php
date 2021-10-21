@@ -7,17 +7,30 @@
 @section('content')
 
 {{-- <h1>ola diablo</h1> --}}
+<div class="container margins" style="background-color: #4c0d0d; margin-top:150px; visibility: hidden;
+    ">
+        <div class="row" style="">
+            <div class="col-12">
+                <ul>
+                    <li>hola</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-    <div class="container cnt1 " style="padding:1em 2rem; ">
+    <div class="container " style="padding:1em 2rem; ">
+        <div class="row">
+            <h5 class="mb-5" style="color:#4c0d0d; : left !important; font-family:'montserrat">Bienvenido {{auth()->user()->name}} !</h5>
+        </div>
         <div class="row ocultar">
             <div class="col-12 text-center">
-                <h4 class="mb-5" style="text-align: left !important; font-family:'montserrat">Bienvenido {{auth()->user()->name}} !</h4>
+
                 <div id="carouselExampleControls" class="carousel slide col-12 col-sm-12 col-lg-12" data-ride="carousel">
                     <div class="carousel-inner">
                     <div class="carousel-item active align-items-center">
-                        <img class=""  src="images/c1.jpeg" alt="primer slide" style="height: 350px" >
+                        <img class="img-fluid img-thumbnail"  src="images/c1.jpeg" alt="primer slide" style="height: 350px" >
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item align-items-center">
                         <img class="img-fluid img-thumbnail" src="images/c2.jpeg" alt="segundo slide" style="max-height: 350px">
                     </div>
 
@@ -35,7 +48,8 @@
         </div>
 
         <div class="row">
-            <h1 class="txtprimary ml-1 mt-5">Lista de cursos y diplomados</h1>
+
+            <h1 class="txtprimary ml-1 mt-3 ">Lista de cursos y diplomados</h1>
         </div>
             <div class="row mt-1 " >
                 @switch(Auth()->user()->cargo)
